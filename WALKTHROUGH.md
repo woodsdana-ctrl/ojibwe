@@ -1,44 +1,53 @@
 # Complete spoiler walkthrough
 
-The following commands are a tested route through all 11 locations and all seven teaching encounters. Use EXAMINE, ASK, JOURNAL, MAP, or progressively stronger HINTs whenever you want more context. Named destinations retrace connecting paths; you can use directions instead. No exact Ojibwe spelling is needed.
+This route is generated from `tests/route.mjs`, the same commands used by the complete engine and browser playthrough. It visits all **12 locations**, completes the records-room caption and sap-labeling task, and encounters all seven teaching reflections. Use `EXAMINE`, `ASK`, `JOURNAL`, `MAP`, `TIMELINE`, and progressively stronger `HINT`s for context. English equivalents work throughout; exact Ojibwe spelling is unnecessary.
 
-## Introduction
+## Opening: Nookomis and the land-history records
 
 ```text
-TALK TO GRANDMA
+TALK TO NOOKOMIS
 EXAMINE PHOTO
 TAKE LIST
 TAKE TOTE
-NORTH
-EAST
+GO ARCHIVE
+EXAMINE RESERVATION MAP
+EXAMINE LAND RECORD
+EXAMINE RESTORATION LAW
+COMPARE RECORDS
+USE RECORDS ON PHOTO
+GO TRAIL
 ```
 
-## Spring: observations, repair, sap, and ongoing syrup work
+## Spring: 2026 weather, 1926 basket, sap labels, and syrup
 
 ```text
-TALK TO NORA
+GO SPRING
+TALK TO WAABAN
 EXAMINE TEMPERATURE LOG
 TAKE TEMPERATURE LOG
 TAKE PAIL
-TAKE GASKET
 EAST
-ASK ROSE ABOUT LEAK
-USE GASKET ON JOINT
-GIVE TEMPERATURE LOG TO ROSE
-ASK ROSE ABOUT TREE
+EXAMINE COLLECTION BASKET
+ASK WAABIGWAN ABOUT BASKET
+TAKE SUPPORT
+USE SUPPORT ON BASKET STAND
+GIVE TEMPERATURE LOG TO WAABIGWAN
+ASK WAABIGWAN ABOUT TREE
 COLLECT SAP
+EXAMINE LABELS
+LABEL SAP AS ZIINZIBAAKWADWAABOO
 EAST
-TALK TO ELI
-GIVE SAP TO ELI
+TALK TO ISHKODE
+GIVE SAP TO ISHKODE
 WAIT
 TAKE NOTEBOOK
 ```
 
-## Summer: a known plot, a flying cloth, and a kept promise
+## Summer 2026: miinan, a flying cloth, and a promise
 
 ```text
 GO SUMMER
-ASK LEENA ABOUT SHARE
+ASK NIIBIN ABOUT SHARE
 TAKE BASKET
 TAKE CLIP
 EAST
@@ -46,31 +55,31 @@ EXAMINE MARKERS
 EXAMINE CLOTH
 USE CLIP ON CLOTH
 PICK BERRIES
-GIVE BASKET TO LEENA
+GIVE BASKET TO NIIBIN
 ```
 
-## Fall: sources across time and a shared rice task
+## Fall: 2026 measurements, 1926 observations, and manoomin
 
 ```text
 GO FALL
-TALK TO DAN
+TALK TO AKI
 USE NOTEBOOK ON WATER PANEL
 TAKE WATER CHART
 EAST
 USE WATER CHART ON NOTEBOOK
-ASK ADA ABOUT PROCESS
+ASK GIIZHIG ABOUT PROCESS
 TAKE TRAY
 USE TRAY ON BASIN
 SORT RICE
-GIVE TRAY TO ADA
+GIVE TRAY TO GIIZHIG
 ```
 
-## Winter: preparation and cooperative fishing
+## Winter 2026: Biboon and a shared giigoonh contribution
 
 ```text
 GO WINTER
-ASK TESS ABOUT CONDITIONS
-ASK TESS ABOUT HELP
+ASK BIBOON ABOUT CONDITIONS
+ASK BIBOON ABOUT HELP
 TAKE ROD
 TAKE LINE
 TAKE MITTENS
@@ -81,30 +90,28 @@ EXAMINE BOBBER
 FISH
 ```
 
-## Grandma’s table
+## Home again: Nookomis’s table in 2026
 
 ```text
 GO KITCHEN
-GIVE SYRUP TO GRANDMA
-GIVE BERRIES TO GRANDMA
-GIVE RICE TO GRANDMA
-GIVE FISH TO GRANDMA
+GIVE ZHIIWAAGAMIZIGAN TO NOOKOMIS
+GIVE MIINAN TO NOOKOMIS
+GIVE MANOOMIN TO NOOKOMIS
+GIVE GIIGOONH TO NOOKOMIS
 ```
 
-## Accepted variants and recovery
+## Variants and recovery
 
-- `I` / `INVENTORY`, `L` / `LOOK`, `X CLOTH` / `EXAMINE CLOTH`; `N`, `S`, `E`, `W`, `SE`, and `NW` are directions.
-- `SPEAK TO GRANDMA JUNE`, `READ WEATHER LOG`, `GRAB BUCKET`, `PICK UP SEAL`, `FIX LEAK`, and `USE BUCKET ON TAP` work.
-- `USE FULL PAIL ON BOILER` delivers sap. `WAIT` at the sugarhouse after delivery represents participating through hours of ongoing work.
-- `INSPECT RIPE FRUIT`, `LOOK AT PICNIC CLOTH`, `APPLY CLAMP TO PICNIC CLOTH`, `GATHER BLUEBERRIES`, and `GIVE BERRY BASKET TO LEENA` work.
-- `WASH THE TRAY`, `SORT WILD RICE`, and `GIVE SORTING TRAY TO ADA` work after the source comparison and process conversation.
-- `WEAR GLOVES`, `ATTACH TACKLE TO FISHING ROD`, `ASK TESS ABOUT BITE`, and `USE FISHING ROD ON FISHING HOLE` work.
-- `OFFER MAPLE SYRUP TO GRANDMA` and English names for the other contributions work.
-- Dropped items stay where you left them. Return to that place and TAKE the item. Failed use/give commands retain your objects. If syrup was left at the sugarhouse, `GO SUGARHOUSE; TAKE SYRUP; GO KITCHEN; GIVE SYRUP TO GRANDMA` repairs the problem.
-- If a command is unclear, include the object, target, character, or topic. `ASK` prompts for who and what; `GIVE` prompts for both parts. `HELP` lists the grammar.
+- `LABEL SAP AS SAP` or `LABEL SAP AS MAPLE SAP` completes the language task using English. `MATCH ZIINZIBAAKWADWAABOO TO SAP` also works. `EXAMINE LABELS` explains the choices.
+- `ASK NIIBIN ABOUT MIINAN`, `PICK MIINAN`, `ASK GIIZHIG ABOUT MANOOMIN`, and `SORT MANOOMIN` use food words in the appropriate tasks. `TRANSLATE MANOOMIN` checks a meaning without changing the puzzle stage.
+- `GIVE SYRUP TO GRANDMA`, `GIVE BERRIES TO GRANDMA`, `GIVE RICE TO GRANDMA`, and `GIVE FISH TO GRANDMA` are English alternatives at the ending. Earlier English character names remain accepted.
+- `FIX BASKET` is a shortcut after reporting the wobble and taking the shaped support. The collection basket and its stand stay in the grove; the portable berry basket belongs to summer.
+- `USE FULL PAIL ON BOILER` delivers labeled sap. `WAIT` after delivery represents hours of shared syrup work; you stay in spring 1926 until crossing the path back.
+- `I` / `INVENTORY`, `L` / `LOOK`, and `X CLOTH` / `EXAMINE CLOTH` work. `N`, `S`, `E`, `W`, `SE`, and `NW` are directions.
+- Named `GO` commands retrace connecting paths without bypassing locks. `GO TRAIL`, then `GO KITCHEN`, always returns along the available route to Nookomis in 2026. `TIMELINE` separates these fictional crossings from the historical events on the records.
+- Dropped items stay where you left them. Return and `TAKE` the item; failed use/give commands retain essential objects. `HINT` reports recoverable supplies. If a contribution was left behind, retrieve it before returning to the kitchen.
+- If a command is unclear, include its object, target, character, or topic. `ASK` and `GIVE` prompt for missing parts; `HELP` lists the grammar.
 
-Normal completion practices Honesty and Wisdom in spring, Respect and Love in summer, Truth and Humility in fall, and Bravery/Courage in winter. Journal entries connect each action to its reflection. These are fictional classroom applications pending local review, not authenticity scores.
+Optional opening conversations: `ASK NOOKOMIS ABOUT HOME`, `ASK NOOKOMIS ABOUT LAND`, and `EXAMINE RESTORATION UPDATE` in the records room. The 2024 update is additional evidence; the three required cards and the photo caption open the trail.
 
-## Optional Ojibwe commands and names
-
-English commands above remain valid. You can also use `TALK TO NOOKOMIS`, `TALK TO WAABAN` (Nora), `ASK WAABIGWAN ABOUT LEAK` (Rose), `ASK NIIBIN ABOUT SHARE` (Leena), and `GO NIIBIN` (summer). At the appropriate steps, `GIVE ZIINZIBAAKWADWAABOO TO ELI`, `GIVE ZHIIWAAGAMIZIGAN TO NOOKOMIS`, `GIVE MIINAN TO NOOKOMIS`, `GIVE MANOOMIN TO NOOKOMIS`, and `GIVE GIIGOONH TO NOOKOMIS` are accepted. Word cards and JOURNAL provide meanings and source context; spelling them is optional. Nicknames are fiction, not claims about naming customs.
+Honesty and Wisdom appear in spring, Respect and Love in summer, Truth and Humility in fall, and Bravery/Courage in winter. These are fictional classroom applications pending local review. The ending brings a family meal together; it does not repair the historical dispossession described in the records.

@@ -1,32 +1,36 @@
-# Content review required
+# Content review
 
-**This game has not been culturally reviewed.** No school, tribal nation, language speaker, or education partner has endorsed it. Before classroom use, invite appropriate local American Indian Education partners and the relevant northern Minnesota tribal education/language partners to review the actual playable draft. Do not treat a technical test pass as cultural approval.
+**Local cultural/classroom review is pending.** No school, tribal nation, language speaker, or education partner has endorsed this game. Technical validation and dictionary verification do not establish that approval. Invite appropriate local American Indian Education and tribal language/education partners to review the playable draft before classroom teaching.
 
-All source metadata, candidate vocabulary, teaching explanations, cultural/safety framing, character dialogue, and location descriptions are in [`src/content.js`](src/content.js). See [`SOURCE_NOTES.md`](SOURCE_NOTES.md) for the source-access record.
+Story, vocabulary, names, teaching reflections, historical cards, and sources are editable in [`src/content.js`](src/content.js). [Source notes](SOURCE_NOTES.md) distinguish evidence actually consulted from potential future review sources.
 
-## Language and character names
+## Language and names
 
-Live Ojibwe People’s Dictionary access still returns a network-policy 403. The playable draft now uses words checked in published OPD-derived archival records and corroborating Freelang data. See `SOURCE_NOTES.md` for pinned sources, exact entry links, speaker/community contexts, and limits. This change establishes a lexical basis, not local approval of the game.
+Twenty-one entries were checked in the live Ojibwe People’s Dictionary on October 14, 2026. Review preferred local forms, contexts, and classroom usage; speaker-community metadata is provenance, not a claim that every entry belongs to one dialect. Preserve the precise meanings of **nookomis** (“my grandmother”), seasonal “it is…” expressions, and **miinan**, the recorded plural of *miin* whose singular is uncommon.
 
-Review the preferred local forms and usage of **nibi**, **zhiiwaagamizigan**, **ziinzibaakwadwaaboo**, **miin/miinan**, **manoomin**, **giigoonh**, **nookomis**, **ziigwan**, **niibin**, **dagwaagin**, and **biboon**. The seasons are taught with the source’s sentence meanings (e.g. “it is spring”); *nookomis* means “my grandmother.” Check exact current dictionary records once access is restored. Preserve each entry’s provenance and do not substitute a single dialect label for all speaker communities.
+Waaban, Waabigwan, Niibin, Ishkode, Aki, Giizhig, and Biboon are primary fictional story names drawn from verified ordinary words or expressions. The dictionary verifies meanings, not traditional bestowed or ceremonial naming practices. Review the creative choices locally. June is addressed as Nookomis through the player’s relationship to her; it is not her personal name. Earlier English names remain command aliases.
 
-Three characters try author-created story nicknames: Nora **Waaban** (“it is dawn / morning”), Rose **Waabigwan** (“a flower”), and Leena **Niibin** (“it is summer”). These are sourced ordinary words used as fictional nickname proposals, not asserted naming customs, bestowed names, or copied names of real speakers. Review their suitability locally and change/remove them if needed. Grandma June remains June; *nookomis* appears as the player’s relationship term. Other characters retain their names.
+Language now appears in the food list, dialogue, inventory, ASK topics, and a sap-labeling task. English equivalents remain accepted. No pronunciation, synthetic Ojibwe audio, or new Ojibwe sentences are invented.
 
-All vocabulary, name aliases, context, and source metadata remain editable in `src/content.js`. English commands continue to work. No fake pronunciation, synthetic Ojibwe audio, or invented Ojibwe sentences are included.
+## History, housing, and chronology
 
-## Teachings
+The setting is a fictional family near Cass Lake on the Leech Lake Reservation. June’s present rental, household, ancestors, photo, and personal property history are invented. No Band-owned lease or specific family displacement is claimed. The kitchen photo is not an archival image of real people.
 
-All seven English names come from the requested project scope. Their short explanations and applications are original fictional classroom wording, not verified definitions or quotations. Review Wisdom, Love, Respect, Bravery/Courage, Honesty, Humility, and Truth for locally appropriate terminology, framing, and interpretation. No animals, ceremonies, sacred narratives, symbols, or magical powers are assigned. Players receive reflections rather than authenticity or moral scores.
+Review the required records-room task and its treatment of **1855** reservation establishment, **1889** Nelson Act allotment/sales, **1948–1959** sales without required consent, the **2020** partial restoration law, and optional **2024** reporting. The court and statute provide federal accounts; the newspaper reports a tribal leader’s perspective. Seek a locally appropriate tribal historical account and verify classroom wording alongside these sources.
 
-## Seasonal practices and representations
+The map is explicitly an illustrative boundary diagram, not a real survey or deed. Boundaries, ownership, sovereignty, and treaty rights are different concepts; the game’s three-card task does not exhaust them. A current home does not establish uninterrupted ownership or a completed remedy. Players cannot prevent or repair dispossession through the time-travel plot. Review the placement of humor so historical harm is never its target.
 
-- **Spring:** An adult-managed, already tapped setup avoids teaching tapping. Review the generalized freezing-night/warmer-day observation, equipment wording, demonstration gasket, tree-care limits, and narrated ongoing syrup preparation. The fictional cross-time part is not a real repair recommendation or historical claim.
-- **Summer:** A fictional maintained family blueberry plot is identified by Leena, not by descriptive clues. Markers indicate her agreed ripe share. Review stewardship and harvesting language; this is not a real-world edible-plant identification guide.
-- **Fall:** The player helps inspect/sort a small cooled sample after the relatives’ unspecified longer preparation. Exact harvest, parching, hulling, winnowing, dates, ownership/permission rules, and ceremonial practices are intentionally omitted because they were not verified. Review this generalized task before teaching it as a representation of local practice. Rice habitat claims remain broad; ask local partners to specify accurate ecological details and sourcing.
-- **Winter:** A knowledgeable partner has already evaluated an established site with local expertise and current guidance. There is no thickness threshold, appearance test, solo route, or hazardous trial-and-error. Review safety wording with a qualified local educator; it is not an ice-safety training resource.
-- **Characters and historical setting:** June, Nora, Rose, Eli, Leena, Dan, Ada, and Tess are fictional. Review names, voices, northern Minnesota setting, family relationships, and 1926/2026 representations. Both periods show agency, practical expertise, and humor. No claim of historical reconstruction is made.
-- **Food/time travel:** The tote preserves contributions through fictional time folds. Grandma and relatives finish cooking at home. Review feast wording to avoid presenting one family’s fictional meal as a universal cultural practice.
+The played 1926/2026 scenes and dated historical cards are separate. Check that learners can identify the fictional ancestors, each crossing, and the route home. Neither 1926 food work nor a present-day kitchen represents every Ojibwe family’s experience.
+
+## Practices, safety, and teachings
+
+- **Spring:** The *biskitenaagan* is supported by a live dictionary entry and historical object record. A Mille Lacs photograph circa 1925 illustrates the object’s period use, not this fictional Leech Lake family. The uneven-ground/wooden-support stability task is invented, not a documented construction or repair method. Adults already selected and tapped the trees. Review weather, agreed-share/tree-care language, and the narrated shared syrup work.
+- **Summer:** Niibin identifies a maintained family blueberry plot and marks the agreed ripe share. This is not a real-world edible-plant identification lesson. Review stewardship and share language.
+- **Fall:** The relatives completed the longer rice preparation before the player inspects a small cooled sample with Giizhig. Detailed harvest/processing methods, dates, permissions, and ceremonies are not taught. Review the supervised task and broad water/habitat claims.
+- **Winter:** Biboon assessed an established site and accompanies the player. No appearance test, thickness threshold, solo ice assessment, or dangerous trial-and-error is taught. Seek qualified local review of the safety framing.
+- **Teachings:** The seven short explanations and applications are original classroom fiction, not verified authoritative definitions or quotations. Review locally appropriate terms and interpretation. No animals, sacred narratives, ceremonies, symbols, or magical powers are assigned to them; no authenticity or moral scores are awarded.
+- **Food and story magic:** The tote’s preservation and time crossings are fictional devices. Relatives finish cooking the contributions at home. One family’s meal is not presented as a universal cultural practice.
 
 ## Review record
 
-For each proposed change, record reviewer role/community (only with consent), date, scope, exact content changes, and unresolved items. No reviewers or approvals are recorded yet. Design target is about 25 minutes; classroom pacing also needs an actual student pilot after content review.
+Record the reviewer’s role/community only with consent, date, scope, exact changes, and unresolved items. No reviewer or approval is recorded yet. The revised estimate of 28–30 minutes still needs a student pacing pilot after content review.

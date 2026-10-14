@@ -1,48 +1,72 @@
-# Language research and source notes
+# Language and historical source notes
 
-The central editable registry is `content.sources`, `content.vocabulary`, and `content.characters` in [`src/content.js`](src/content.js). Language is now displayed in the game, with English meanings and source links. Cultural and classroom review is still pending.
+The editable registry is `content.sources`, `content.vocabulary`, `content.characters`, and `content.history` in [`src/content.js`](src/content.js). Live dictionary verification is complete for the selected words; local cultural/classroom review remains pending.
 
-## Live dictionary access
+## Live language sources
 
-Requests to https://ojibwe.lib.umn.edu/ and its nibi entry on 2026-10-14 returned proxy **403 Forbidden**. A retry confirmed the same restriction. The domain was added to the saved environment network draft; the running machine has not yet received that access. No network restriction or TLS verification was bypassed.
+On **October 14, 2026**, research accessed the live [Ojibwe People’s Dictionary](https://ojibwe.lib.umn.edu/) and checked **21 entries**, their short English meanings, relevant forms, and recorded speaker contexts. Earlier archived sources remain corroboration; the present language metadata identifies the live dictionary as its primary source. Previous notes saying current dictionary access was blocked are superseded.
 
-The findings below were checked in independently hosted published resources. They are **archival verification, not current live dictionary lookup**.
+Lexical material is credited to and copyrighted by **The Ojibwe People’s Dictionary**, with entry links below, following its [usage guidance](https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions). No speaker recordings or collection images were copied. No pronunciation audio or new Ojibwe sentences were generated.
 
-## Sources actually consulted
-
-1. [ELF Lab OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon/tree/dba4e5c008c886d4835e64150f97e25b26b3dab1), especially `OPD/NOUNS.csv`, `OPD/VERBS.csv`, and the nookomis inflection record. Its README identifies the data as OPD-derived. This source verifies lemmas, morphology, and original entry URLs; its lexical CSVs do not provide English definitions. Citation: Hammerly, Livesay, Arppe, Stacey & Silfverberg (2026), *OjibweMorph*, Language Resources and Evaluation, 60, 1–44, DOI 10.1007/s10579-025-09887-4.
-2. [Published OPD export, pinned 2020 snapshot](https://github.com/jacobsolinsky/opd/blob/960b9c95ce13743053ee03246698a4c331ccbb83/dataEntry/all_entries3.json), with [speaker metadata](https://github.com/jacobsolinsky/opd/blob/960b9c95ce13743053ee03246698a4c331ccbb83/database/speakers.json). This third-party archive stores original entry paths, glosses, inflected/basic forms, and recorded head speakers. The last repository commit is 2020-08-13. It is not represented as an official current OPD publication.
-3. [Freelang Ojibwe dictionary export](https://github.com/george-steel/ojibwe-dict-app/blob/a7865eac8337348c13f5964afab5804a783f8981/data/dictionary.tsv), with its [compiler/provenance document](https://github.com/george-steel/ojibwe-dict-app/blob/a7865eac8337348c13f5964afab5804a783f8981/data/ojibwe_readme.pdf). Compilers: Weshki-ayaad, Charlie Lippert, and Guy Gambill. The provenance document credits consulted Mille Lacs and Bois Forte educators; page 4 identifies unmarked entries as Southwestern/Minnesota, using double-vowel spelling. This independent dictionary corroborates the core words and supplies meanings for the nickname proposals.
-
-## Words checked
-
-| Game form | English meaning | Original OPD entry | Recorded head-speaker context in the archive |
+| Game form | Meaning used in the game | Live entry | Recorded head-speaker/community context |
 | --- | --- | --- | --- |
-| nibi | water | [nibi-ni](https://ojibwe.lib.umn.edu/main-entry/nibi-ni) | Nancy Jones, Nigigoonsiminikaaning |
-| zhiiwaagamizigan | syrup; maple syrup | [zhiiwaagamizigan-ni](https://ojibwe.lib.umn.edu/main-entry/zhiiwaagamizigan-ni) | Nancy Jones, Nigigoonsiminikaaning |
-| ziinzibaakwadwaaboo | maple sap | [ziinzibaakwadwaaboo-ni](https://ojibwe.lib.umn.edu/main-entry/ziinzibaakwadwaaboo-ni) | No head speaker recorded |
-| miinan | blueberries; plural of miin, a blueberry | [miin-ni](https://ojibwe.lib.umn.edu/main-entry/miin-ni) | Eugene Stillday, Obaashiing / Red Lake |
-| manoomin | wild rice | [manoomin-ni](https://ojibwe.lib.umn.edu/main-entry/manoomin-ni) | Leona Wakonabo, Cha-cha-bah-ning / Leech Lake |
-| giigoonh | a fish | [giigoonh-na](https://ojibwe.lib.umn.edu/main-entry/giigoonh-na) | Gerri Howard, Cha-cha-bah-ning / Leech Lake |
-| nookomis | my grandmother | [nookomis-nad](https://ojibwe.lib.umn.edu/main-entry/nookomis-nad) | Eugene Stillday, Obaashiing / Red Lake |
-| ziigwan | it is spring | [ziigwan-vii](https://ojibwe.lib.umn.edu/main-entry/ziigwan-vii) | Eugene Stillday, Obaashiing / Red Lake |
-| niibin | it is summer | [niibin-vii](https://ojibwe.lib.umn.edu/main-entry/niibin-vii) | Eugene Stillday, Obaashiing / Red Lake |
-| dagwaagin | it is fall / autumn | [dagwaagin-vii](https://ojibwe.lib.umn.edu/main-entry/dagwaagin-vii) | Eugene Stillday, Obaashiing / Red Lake |
-| biboon | it is winter | [biboon-vii](https://ojibwe.lib.umn.edu/main-entry/biboon-vii) | No head speaker recorded |
+| nibi | water | [entry](https://ojibwe.lib.umn.edu/main-entry/nibi-ni) | Nancy Jones — Nigigoonsiminikaaning |
+| zhiiwaagamizigan | maple syrup | [entry](https://ojibwe.lib.umn.edu/main-entry/zhiiwaagamizigan-ni) | Nancy Jones — Nigigoonsiminikaaning |
+| miinan | blueberries | [entry](https://ojibwe.lib.umn.edu/main-entry/miin-ni) | Eugene Stillday — Obaashiing / Red Lake |
+| manoomin | wild rice | [entry](https://ojibwe.lib.umn.edu/main-entry/manoomin-ni) | Leona Wakonabo — Jaachaabaaning / Leech Lake |
+| giigoonh | a fish | [entry](https://ojibwe.lib.umn.edu/main-entry/giigoonh-na) | Gerri Howard — Jaachaabaaning / Leech Lake |
+| nookomis | my grandmother | [entry](https://ojibwe.lib.umn.edu/main-entry/nookomis-nad) | Eugene Stillday — Obaashiing / Red Lake |
+| ziinzibaakwadwaaboo | maple sap | [entry](https://ojibwe.lib.umn.edu/main-entry/ziinzibaakwadwaaboo-ni) | No head speaker recorded |
+| ziigwan | it is spring | [entry](https://ojibwe.lib.umn.edu/main-entry/ziigwan-vii) | Eugene Stillday — Obaashiing / Red Lake |
+| niibin | it is summer | [entry](https://ojibwe.lib.umn.edu/main-entry/niibin-vii) | Eugene Stillday — Obaashiing / Red Lake |
+| dagwaagin | it is fall / autumn | [entry](https://ojibwe.lib.umn.edu/main-entry/dagwaagin-vii) | Eugene Stillday — Obaashiing / Red Lake |
+| biboon | it is winter | [entry](https://ojibwe.lib.umn.edu/main-entry/biboon-vii) | Nancy Jones — Nigigoonsiminikaaning |
+| waabigwan | a flower | [entry](https://ojibwe.lib.umn.edu/main-entry/waabigwan-ni) | Nancy Jones — Nigigoonsiminikaaning |
+| waaban | it is dawn | [entry](https://ojibwe.lib.umn.edu/main-entry/waaban-vii) | Eugene Stillday — Obaashiing / Red Lake |
+| ishkode | fire; a fire | [entry](https://ojibwe.lib.umn.edu/main-entry/ishkode-ni) | Eugene Stillday — Obaashiing / Red Lake |
+| aki | earth; land; ground | [entry](https://ojibwe.lib.umn.edu/main-entry/aki-ni) | Gerri Howard — Jaachaabaaning / Leech Lake |
+| giizhig | sky | [entry](https://ojibwe.lib.umn.edu/main-entry/giizhig-na) | Eugene Stillday — Obaashiing / Red Lake |
+| biskitenaagan | a sap bucket of folded birch bark | [entry](https://ojibwe.lib.umn.edu/main-entry/biskitenaagan-ni) | Gerri Howard — Jaachaabaaning / Leech Lake |
+| wiigwaas | birch bark | [entry](https://ojibwe.lib.umn.edu/main-entry/wiigwaas-ni) | Eugene Stillday — Obaashiing / Red Lake |
+| ininaatig | a maple (sugar maple) | [entry](https://ojibwe.lib.umn.edu/main-entry/ininaatig-na) | Gerri Howard — Jaachaabaaning / Leech Lake |
+| iskigamizigan | a sugar bush; a sugar camp | [entry](https://ojibwe.lib.umn.edu/main-entry/iskigamizigan-ni) | Leona Wakonabo — Jaachaabaaning / Leech Lake |
+| makak | a basket; a box | [entry](https://ojibwe.lib.umn.edu/main-entry/makak-ni) | Eugene Stillday — Obaashiing / Red Lake |
 
-The archive's entry region lists are empty. A recorded speaker's community is source context, not a claim that a word belongs exclusively to that community or that all entries share one dialect. Local preferred forms remain for review. The explicit miinan plural is in the archived basic forms; it was not invented by guessing an ending.
+Speaker communities are source provenance, not a claim that all words share one dialect or that a word belongs exclusively to one community. Local preferred usage still needs review. **Miinan** is an explicitly recorded plural; the dictionary notes that singular *miin* is uncommon. **Nookomis** means “my grandmother.” The season entries are complete “it is…” expressions. *Waaban* also has “it is tomorrow” as a dictionary sense; the story uses “it is dawn.” *Giizhig* also has sky/heaven and day senses; the story name uses sky.
 
-## Character nickname choices
+## Fictional character names
 
-| Character | Fictional nickname | Word meaning and source |
+| Primary story name | Earlier English alias | Sourced word meaning |
 | --- | --- | --- |
-| Nora | Waaban | it is dawn / morning; [OPD-derived lemma row](https://github.com/ELF-Lab/OjibweLexicon/blob/dba4e5c008c886d4835e64150f97e25b26b3dab1/OPD/VERBS.csv#L25540), Freelang lines 83713–83716 |
-| Rose | Waabigwan | a flower; [OPD-derived lemma row](https://github.com/ELF-Lab/OjibweLexicon/blob/dba4e5c008c886d4835e64150f97e25b26b3dab1/OPD/NOUNS.csv#L4048), Freelang line 84119 |
-| Leena | Niibin | it is summer; OPD-derived entry and archived gloss above |
-| Grandma June | nookomis, in the player’s narration | my grandmother; a relationship term, **not** June’s personal name |
+| Nookomis | June / Grandma | my grandmother; the player’s relationship term, not June’s personal name |
+| Waaban | Nora | it is dawn |
+| Waabigwan | Rose | a flower |
+| Niibin | Leena | it is summer |
+| Ishkode | Eli | fire; a fire |
+| Aki | Dan | earth; land; ground |
+| Giizhig | Ada | sky; also day in the dictionary |
+| Biboon | Tess | it is winter |
 
-The three nicknames are creative choices for this fictional story. The ordinary-word meanings are sourced; no claim is made that these are customary bestowed personal names or naming traditions. Suitability of the nickname choices remains for local review. June, Eli, Dan, Ada, and Tess keep their personal names. No real speaker’s publicly shared name is assigned to a fictional character.
+These ordinary-word choices are fictional story names. The dictionary verifies meanings, not customary bestowed or ceremonial personal names. Their suitability remains for local review. Earlier English command aliases are retained. No real dictionary speaker’s personal name was assigned to a character.
 
-## Scope and remaining work
+## Spring object evidence
 
-No pronunciation audio or original Ojibwe sentences were generated. English commands remain accepted; the sourced words and nicknames are optional command aliases. Local American Indian Education and relevant language partners have not yet reviewed or endorsed this game. Teachings and practices remain fictional classroom applications requiring review as described in `CONTENT_REVIEW.md`.
+The live [biskitenaagan entry](https://ojibwe.lib.umn.edu/main-entry/biskitenaagan-ni) identifies a sap bucket of folded birch bark, with a birch-bark-basket sense. The dictionary’s [Minnesota Historical Society sap-bucket collection record](https://ojibwe.lib.umn.edu/collection/sap-bucket-of-folded-birch-bark) documents its use in gathering sugar maple sap. An [Mille Lacs collection photograph circa 1925](https://ojibwe.lib.umn.edu/collection/mrs-john-mink-collecting-maple-sap-mille-lacs-fb5a7837-fbaa-41a1-aa39-9ae3581d6813) provides a period example.
+
+That evidence supports the object type and historical setting. It does not document the invented wooden stand/support puzzle, teach manufacture or tapping, or identify the fictional Leech Lake family. The kitchen’s family photo and ancestors are invented; no historical collection image is presented as their portrait.
+
+## Leech Lake historical evidence actually consulted
+
+1. [Cass County v. Leech Lake Band of Chippewa Indians, 524 U.S. 103 (1998), pinned opinion transcription](https://github.com/rosthalken/supreme-court-thesis/blob/0310d65a47969e79f560f7c74207d11c3f8ff62d/SupremeCourtCorpusFinalEncoded/ThomasOriginal/Cass%20County%20Minn%20v%20Leech%20Lake%20Band%20of%20Chippewa%20Indians.txt). The federal court’s historical account describes reservation establishment by treaty in **1855** and **1889** Nelson Act allotment, pine-land auctions, and agricultural-land sales. This is a federal judicial account, not a tribal historical account or present parcel map.
+2. [Enacted Public Law 116-255, pinned GPO-text archive](https://github.com/Research-as-a-Code/Research_as_a_Code/blob/8b809174b41204d0059cc32ca2f78141f1efe4b2/data/congress/116_s_199.txt), approved **December 23, 2020**. Congress’s findings describe **1948–1959** allotment sales without consent of a majority of rightful landowners and a **1959** instruction to stop sales identified as illegal. The law directs approximately **11,760 acres** into federal trust for the Band: a partial remedy. The [original federal page](https://www.govinfo.gov/content/pkg/PLAW-116publ255/html/PLAW-116publ255.htm) was network-denied; the archived enacted text was read, and direct federal-host access is not claimed. A 2020 authorization alone does not establish completion of every transfer or return every former owner’s individual parcel.
+3. [Daltyn Lofstrom / Forum Communications, July 18, 2024, pinned newspaper-report archive](https://github.com/Reholly/DataEngineering/blob/8828bf5e41e446aaa6c88bdc9cae83f41aa503c5/data/news/environment3/article_17.json). The report describes a restoration celebration and records Chairman Faron Jackson Sr.’s connection between dispossession, homelessness, and room for future homes. This is newspaper reporting with a tribal leader’s perspective, not a directly consulted tribal release or independently checked federal transfer decision.
+
+The records-room illustration distinguishes **boundary**, **ownership/land loss**, and **partial remedy**. It is not a real survey, deed, or complete account of sovereignty and treaty rights. Community events do not establish the personal title history or displacement of this invented family. June’s current rental near Cass Lake is a fictional household detail; no specific Band-owned lease, uninterrupted ancestral ownership, or completed remedy is claimed. Direct local tribal historical review and current housing-source verification remain work for the review process.
+
+The game keeps dated historical evidence separate from the fictional 1926/2026 travel plot. It does not include unverified Sugar Point details or treat helping with a meal as undoing dispossession.
+
+## Earlier corroboration and further review
+
+The [ELF Lab OjibweLexicon](https://github.com/ELF-Lab/OjibweLexicon/tree/dba4e5c008c886d4835e64150f97e25b26b3dab1), [2020 third-party OPD export](https://github.com/jacobsolinsky/opd/blob/960b9c95ce13743053ee03246698a4c331ccbb83/dataEntry/all_entries3.json), and [Freelang export with compiler provenance](https://github.com/george-steel/ojibwe-dict-app/tree/a7865eac8337348c13f5964afab5804a783f8981/data) were consulted in the earlier revision and remain identified in `content.sources`. They are independent archives or corroboration, not replacements for the current live lookup.
+
+University of Minnesota Extension and Minnesota DNR remain potential science/safety review sources; their presence in the source registry does not mean specific pages or claims were verified. See [content review](CONTENT_REVIEW.md) for teachings, practices, ecological wording, safety framing, history, and classroom review needs. No community partner has yet reviewed or endorsed the draft.

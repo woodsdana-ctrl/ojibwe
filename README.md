@@ -1,8 +1,20 @@
 # Four Seasons to Grandma’s Table
 
-A complete browser text adventure for high school students. Start at Grandma June’s kitchen in northern Minnesota, follow a fictional trail across four seasons and 1926/2026, and contribute syrup, blueberries, prepared wild rice, and fish to a larger family feast.
+A playable browser text adventure for high school students, blending Ojibwe vocabulary, family humor, seasonal problem solving, and Leech Lake history. Begin at Nookomis’s present-day rented home near Cass Lake, compare land-history records, then follow four seasonal paths to bring syrup, blueberries, prepared wild rice, and fish to the family table.
 
-The game has 11 compact locations, four multi-step seasonal puzzles, character conversations, three-tier hints, inventory, an explored map, a journal, all seven teaching reflections, command history, local autosave, manual checkpoints, repairable mistakes, and an ending that remembers your actions. About 25 minutes is the design target; no timed classroom pilot has been conducted.
+[Play the website](https://woodsdana-ctrl.github.io/ojibwe/). For the full revised opening, start a new game; saves keep earlier progress.
+
+The game has **12 compact locations**, a records-room investigation, four seasonal puzzles, a sap-labeling task, character conversations, three-level hints, bilingual inventory, an explored map, a word journal, seven teaching reflections, explicit time-crossing notices, and a timeline. The original 25-minute target is now approximately **28–30 minutes** with the history opening, depending on reading and exploration. This is an estimate; no timed classroom pilot has been conducted.
+
+## Play
+
+Start with `TALK TO NOOKOMIS`, `EXAMINE PHOTO`, `TAKE LIST`, and `TAKE TOTE`. Visit the records room east before following the trail. `HELP` lists controls; `HINT` advances from a nudge to explicit commands.
+
+Ojibwe food words appear in requests and tasks: try `ASK NIIBIN ABOUT MIINAN`, `TRANSLATE MANOOMIN`, or `GIVE GIIGOONH TO NOOKOMIS`. English equivalents work throughout, including `LABEL SAP AS SAP`. Exact Ojibwe spelling is not required. Earlier English character names remain accepted aliases.
+
+`TIMELINE` separates your fictional 1926/2026 crossings from the dated land-history events. `GO SUMMER` and other named destinations retrace connecting paths without bypassing puzzle locks. The trail returns home in 2026.
+
+Arrow Up/Down recalls commands. Buttons are keyboard-accessible shortcuts. `SAVE` makes a checkpoint; `LOAD` restores it while autosave continues separately. `RESTART` asks before clearing both. Saves stay in this browser on this website’s origin. Restricted browser storage does not prevent playing the current session.
 
 ## Run locally
 
@@ -12,21 +24,15 @@ Install Node.js 22 or newer. In the game folder run:
 npm start
 ```
 
-Open `http://localhost:8000` **on that same computer**. For the shared cloud workspace, run from `/workspace/ojibwe`; cloud localhost is not a public game link. Alternatively serve the folder with Python 3: `python3 -m http.server 8000`.
+Open `http://localhost:8000` **on that same computer**. In the shared cloud workspace, run from `/workspace/ojibwe`; cloud localhost is not a public website address. Alternatively serve the folder with Python 3: `python3 -m http.server 8000`.
 
-There are no package dependencies, installation steps, accounts, API keys, backend, runtime AI calls, or analytics. This uses the repository’s existing plain-JavaScript browser stack with separate ES modules. Double-clicking HTML is not the supported launch method because browsers restrict local module loading; use a local server or the hosted website.
+The game uses plain JavaScript and separate browser modules. There are no application dependencies, install steps, accounts, API keys, backend, runtime AI calls, analytics, or student identifiers. Serve the files locally or use the hosted website; double-clicking HTML is unsupported because browsers restrict local module loading.
 
-## Play
+## Build and publish
 
-Start with `TALK TO GRANDMA`, `EXAMINE PHOTO`, and `TAKE LIST`. Type `HELP` for all commands. `HINT` provides three levels of assistance per step. `GO SUMMER` and other named destinations retrace connecting paths without bypassing puzzle locks. English equivalents work; no exact Ojibwe spelling is required.
+`.github/workflows/pages.yml` builds and deploys the static site from `main`. In repository **Settings → Pages**, choose **GitHub Actions**, then run **Publish game website** or push an authorized update to `main`. A successful upload alone does not verify deployment.
 
-Arrow Up/Down recalls typed commands. All buttons are optional keyboard-accessible shortcuts. `SAVE` makes a checkpoint; `LOAD` restores it while autosave continues separately. `RESTART` asks before clearing both. Saves stay in this browser on this website’s origin. Browser storage restrictions do not prevent playing the current session.
-
-## Website publication
-
-The included `.github/workflows/pages.yml` builds and deploys the static site from `main`. In repository **Settings → Pages**, choose **GitHub Actions** as the source, then run **Publish game website** or push an authorized update to `main`. GitHub reports the public address after successful deployment. A local test or Git upload alone does not prove the website is live.
-
-`npm run build` copies only `index.html` and the runtime `src/` directory into `dist/`. Host `dist/` with any static website host. Links to teacher/review documents are included in the built website too.
+`npm run build` copies `index.html`, runtime `src/`, and the linked teacher, review, source, and walkthrough documents into `dist/`. Any static website host can serve that folder.
 
 ## Validation
 
@@ -35,16 +41,17 @@ npm test
 npm run build
 ```
 
-The Node test suite covers the complete route, all seven teaching encounters, parser aliases, three-level hint progression, safe route gates, puzzle prerequisites, wrong commands, dropped-object recovery, separate manual/autosaves, and save validation.
+The Node suite covers the complete route, history comparison and caption, sap labeling, teaching encounters, aliases, hints, puzzle prerequisites, route gates, recoverable mistakes, storage, and save validation. Browser checks use the same complete route.
 
-For browser integration checks, provide Playwright and its Chromium browser (or system Chromium), then run `npm run test:browser`. The browser test starts and stops its own server, plays the complete route, checks reload/checkpoints/restart/history, tests blocked storage, and checks 1366×768 Chromebook and narrow-phone layouts. Playwright is optional test tooling, not an application dependency.
+For browser integration, provide Playwright and Chromium, then run `npm run test:browser`. It checks the ending, reload/checkpoints/restart, command history, restricted storage, and Chromebook and phone layouts. Playwright is optional test tooling, not an application dependency.
 
-## Files and classroom review
+## Classroom and source documents
 
-- `src/content.js`: editable story, cultural/teaching explanations, vocabulary review metadata, and sources.
-- `src/parser.js`, `src/engine.js`, `src/storage.js`, `src/ui.js`: parser, deterministic state, persistence, and interface.
-- [Teacher guide](TEACHER_GUIDE.md): goals, timing, and three discussion questions.
-- [Content review](CONTENT_REVIEW.md) and [source notes](SOURCE_NOTES.md): unverified details and required local review.
-- [Spoiler walkthrough](WALKTHROUGH.md): a complete tested route and accepted variants.
+- [Teacher guide](TEACHER_GUIDE.md): goals, pacing, timeline, and discussion.
+- [Content review](CONTENT_REVIEW.md): specific items for local review.
+- [Source notes](SOURCE_NOTES.md): live dictionary entries, historical evidence, and source limits.
+- [Spoiler walkthrough](WALKTHROUGH.md): the complete tested route and command variants.
 
-This is **not culturally reviewed**. Live dictionary access remains blocked, but the game now includes vocabulary checked against published archival OPD-derived and independent dictionary data, with source links, recorded speaker contexts, and precise English meanings. Three characters try clearly labeled fictional nicknames from sourced words. Review local preferred forms and nickname suitability with appropriate American Indian Education and tribal language partners before classroom use. Time travel is fiction, not an Ojibwe belief. No student identifiers are collected.
+`src/content.js` holds story, vocabulary, character names, history, and source metadata. Parser, engine, storage, and interface code are separate modules under `src/`.
+
+Live Ojibwe People’s Dictionary entries and selected historical object records were checked on October 14, 2026. **Local cultural/classroom review remains pending.** Character names use verified ordinary words; the story does not assert ceremonial naming customs. The household and ancestors are fictional; the documented land-history events are identified by source. Time travel is a storytelling invention. A present-day home does not imply that dispossession was repaired, and the adventure cannot undo that history.
