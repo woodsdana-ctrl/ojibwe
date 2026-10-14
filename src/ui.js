@@ -1,5 +1,5 @@
 import {content} from './content.js';
-import {newGame,execute,look,exits,currentGoal} from './engine.js';
+import {newGame,execute,look,exits,currentGoal,vocabularyAt} from './engine.js';
 import {saveState,loadState,clearSaves} from './storage.js';
 const $=id=>document.getElementById(id);let state=newGame();let storageAvailable=true;let startup='';let history=[],historyIndex=0,draft='';
 try{const saved=loadState(localStorage);if(saved){state=saved;startup='Your autosaved journey has been restored.';}}catch{startup='Saved progress could not be read. A new playable session is open; the old save has not been erased.';storageAvailable=false;}
@@ -9,7 +9,8 @@ function storageStatus(){ $('storage-status').textContent=storageAvailable?'Auto
 function commandButton(text,command){const b=document.createElement('button');b.type='button';b.textContent=text;b.onclick=()=>run(command);return b;}
 function refresh(){const room=content.locations[state.location];document.body.dataset.season=room.season;$('location').textContent=room.name;$('season').textContent=room.season;$('period').textContent=room.time;$('objective').textContent=currentGoal(state);$('contributions').replaceChildren();for(const id of ['syrup','berries','rice','fish']){const li=document.createElement('li');const mark=document.createElement('span');mark.textContent=state.flags['delivered:'+id]?'✓':state.flags[id]?'◆':'○';const name={syrup:'Maple syrup',berries:'Blueberries',rice:'Prepared wild rice',fish:'Fish'}[id];li.append(mark,document.createTextNode(`${name} · ${state.flags['delivered:'+id]?'at table':state.flags[id]?'gathered':'needed'}`));$('contributions').append(li);}
   $('exit-controls').replaceChildren();for(const e of exits(state)){const b=commandButton(`${e.direction.toUpperCase()}${e.locked?' · later':''}`,e.direction);b.setAttribute('aria-label',`Go ${e.direction} to ${e.name}${e.locked?' (not open yet)':''}`);$('exit-controls').append(b);}
-  $('nearby').replaceChildren();const suggestions=['LOOK',...room.characters.map(p=>`TALK TO ${p.toUpperCase()}`),...room.objects.slice(0,4).map(o=>`EXAMINE ${o.toUpperCase()}`)];for(const c of suggestions)$('nearby').append(commandButton(c,c));storageStatus();
+  $('nearby').replaceChildren();const suggestions=['LOOK',...room.characters.map(p=>`TALK TO ${(content.characters[p].nickname||p).toUpperCase()}`),...room.objects.slice(0,4).map(o=>`EXAMINE ${o.toUpperCase()}`)];for(const c of suggestions)$('nearby').append(commandButton(c,c));
+  $('word-cards').replaceChildren();for(const v of vocabularyAt(state)){const div=document.createElement('div');div.className='word-card';const word=document.createElement('strong');word.lang='oj';word.textContent=v.ojibwe;const link=document.createElement('a');link.href=v.primaryEntry;link.target='_blank';link.rel='noopener';link.textContent='Dictionary entry';div.append(word,document.createTextNode(' — '+v.english),document.createElement('br'),link);$('word-cards').append(div);}storageStatus();
 }
 function run(input){const text=input.trim();if(!text)return;history.push(text);historyIndex=history.length;draft='';$('command').value='';append('> '+text,'command');const result=execute(state,text);
   if(result.effect==='restart'){$('restart-dialog').showModal();refresh();return;}

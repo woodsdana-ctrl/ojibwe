@@ -23,6 +23,8 @@ export function goalKey(s){
 export function currentGoal(s){return C.stages[goalKey(s)].goal;}
 function note(s,id,title,text){if(s.discoveries.includes(id))return;s.discoveries.push(id);s.journal.push({title,text});}
 function learn(s,id){if(!s.vocabulary.includes(id))s.vocabulary.push(id);}
+const roomWords={kitchen:['grandma'],weather:['spring','sap'],grove:['spring','sap','water'],sugarhouse:['sap','syrup'],summeredge:['summer','berries'],patch:['summer','berries'],landing:['fall','water','rice'],shed:['fall','rice'],hut:['winter','fish'],shelter:['winter','fish']};
+export function vocabularyAt(s){return (roomWords[s.location]||[]).map(id=>C.vocabulary.find(v=>v.id===id)).filter(v=>v?.ojibwe);}
 function teaching(s,name){if(s.teachings[name])return '';s.teachings[name]=true;const t=C.teachings[name];note(s,'teaching:'+name,name,t.experience);return `\n${name} — ${t.explanation}\nJournal: ${t.experience}`;}
 function award(s,id){s.flags[id]=true;s.items[id]='inventory';if(!s.inventory.includes(id))s.inventory.push(id);learn(s,id);}
 function remove(s,id,pos=null){s.inventory=s.inventory.filter(x=>x!==id);s.items[id]=pos;}
@@ -30,6 +32,7 @@ function held(s,id){return s.inventory.includes(id);}
 function visible(s,id){return held(s,id)||s.items[id]===s.location||C.locations[s.location].objects.includes(id);}
 function missing(s,id){const pos=s.items[id];return pos&&C.locations[pos]?`You need ${C.items[id].name}. It is at ${C.locations[pos].name}; TAKE ${id.toUpperCase()} there.`:`You need ${C.items[id]?.name||id} first. Check your inventory and the current goal.`;}
 const itemAliases=Object.entries(C.items).flatMap(([id,item])=>[[id,id],[noun(item.name),id],...(item.aliases||[]).map(alias=>[noun(alias),id])]);
+for(const v of C.vocabulary){if(v.ojibwe&&(C.items[v.id]||v.id==='water'))for(const alias of [v.ojibwe,...(v.aliases||[])])itemAliases.push([noun(alias),v.id]);}
 function resolveObject(s,name){
   const exact=itemAliases.filter(([alias])=>alias===name).map(([,id])=>id);if(exact.length)return [...new Set(exact)];
   const objects=C.locations[s.location].objects;if(objects.includes(name))return [name];
@@ -38,9 +41,10 @@ function resolveObject(s,name){
   return [...new Set([...itemAliases.filter(([alias,id])=>alias.includes(name)&&visible(s,id)).map(([,id])=>id),...objects.filter(id=>id.includes(name))])];
 }
 function one(s,name){if(!name)return {error:'Which object do you mean? Try EXAMINE LOG or USE GASKET ON JOINT.'};const ids=resolveObject(s,name);if(!ids.length)return {error:`I cannot find “${name}” here. LOOK lists the surroundings; INVENTORY lists what you carry.`};if(ids.length>1)return {error:`Do you mean ${ids.join(' or ')}? Add the object’s name to your command.`};return {id:ids[0]};}
-function person(name){return {june:'grandma','grandma june':'grandma','grandmother':'grandma',aunt:'tess','aunt tess':'tess'}[name]||name;}
+function person(name){const match=Object.entries(C.characters).find(([id,c])=>[id,c.name,...(c.aliases||[])].some(alias=>noun(alias)===name));return match?.[0]||name;}
 function withCharacter(s,name){return C.locations[s.location].characters.includes(name);}
 const destinationAliases={home:'kitchen','grandmas kitchen':'kitchen','grandma':'kitchen',spring:'weather','weather station':'weather','station':'weather',grove:'grove','maple grove':'grove','sugar house':'sugarhouse','summer':'summeredge','picnic shelter':'summeredge','blueberry patch':'patch','blueberries':'patch',fall:'landing','field station':'landing','rice shed':'shed',winter:'hut','equipment hut':'hut','fishing shelter':'shelter','familiar trail':'trail'};
+for(const [id,destination] of Object.entries({spring:'weather',summer:'summeredge',fall:'landing',winter:'hut'})){const v=C.vocabulary.find(v=>v.id===id);if(v?.ojibwe)destinationAliases[noun(v.ojibwe)]=destination;}
 function gate(s,from,to){
   if(from==='kitchen'&&to==='trail'&&(!s.flags.intro||!held(s,'list')||!held(s,'tote')))return 'Talk to Grandma and carry both the feast list and tote before heading out.';
   if(from==='trail'&&to==='summeredge'&&(!s.flags.syrup||!s.flags.notebookFound))return 'Spring comes first. Finish the syrup contribution and take Eli’s shoreline notebook.';
@@ -50,7 +54,7 @@ function gate(s,from,to){
   return '';
 }
 export function exits(s){return Object.entries(C.locations[s.location].exits).map(([direction,to])=>({direction,to,name:C.locations[to].name,locked:!!gate(s,s.location,to)}));}
-export function look(s){const r=C.locations[s.location];const items=Object.entries(s.items).filter(([,pos])=>pos===s.location).map(([id])=>C.items[id].name);return `${r.name} · ${r.season} · ${r.time}\n${r.description}\n${items.length?'Available: '+items.join(', ')+'.\n':''}Exits: ${exits(s).map(e=>`${e.direction} (${e.name}${e.locked?'; not yet':''})`).join(' · ')}.\nGoal: ${currentGoal(s)}`;}
+export function look(s){const r=C.locations[s.location];const items=Object.entries(s.items).filter(([,pos])=>pos===s.location).map(([id])=>C.items[id].name);const words=vocabularyAt(s);return `${r.name} · ${r.season} · ${r.time}\n${r.description}\n${items.length?'Available: '+items.join(', ')+'.\n':''}Exits: ${exits(s).map(e=>`${e.direction} (${e.name}${e.locked?'; not yet':''})`).join(' · ')}.\n${words.length?'Word cards: '+words.map(v=>v.ojibwe+' — '+v.english).join(' · ')+'.\n':''}Goal: ${currentGoal(s)}`;}
 function move(s,target){
   const current=C.locations[s.location];const direct=current.exits[target];const dest=direct||destinationAliases[target]||(C.locations[target]?target:null);
   if(!dest)return 'Where would you like to go? LOOK lists exits; MAP shows places you have visited. You can also GO SPRING, GO SUMMER, GO FALL, or GO WINTER.';
@@ -59,11 +63,13 @@ function move(s,target){
   while(queue.length){const path=queue.shift(),last=path.at(-1);if(last===dest){route=path;break;}for(const to of Object.values(C.locations[last].exits)){if(!seen.has(to)&&!gate(s,last,to)){seen.add(to);queue.push([...path,to]);}}}
   if(!route){const blocked=direct&&gate(s,s.location,dest);return blocked||gate(s,'trail',dest)||gate(s,'hut',dest)||'That route is not open yet. Check the current goal before crossing to the next season.';}
   for(const id of route.slice(1)){s.location=id;if(!s.visited.includes(id))s.visited.push(id);}
+  for(const v of vocabularyAt(s))learn(s,v.id);
   learn(s,'water');if(dest==='shed')learn(s,'rice');if(dest==='shelter')learn(s,'fish');
   return (route.length>2?`You retrace the connecting paths (${route.slice(1,-1).map(id=>C.locations[id].name).join(' → ')}).\n`:'')+look(s);
 }
 function talk(s,name,topic='default'){
   name=person(name);if(!withCharacter(s,name))return `${name||'That person'} is not here. People here: ${C.locations[s.location].characters.join(', ')||'just you and a very patient narrator'}.`;
+  const character=C.characters[name];if(character?.word){learn(s,character.word);note(s,'nickname:'+name,character.nickname+' — '+character.name,character.note+' See the word journal for the sourced word meaning.');}
   const raw=topic;topic=noun(topic);if(name==='grandma'){s.flags.intro=true;learn(s,'grandma');note(s,'intro','A family contribution','Grandma June needs four small contributions; the rest of the family is preparing the larger meal. The tote’s time folds preserve the story’s contributions without a food-storage simulation.');}
   if(name==='rose'&&/leak|mistake|joint|honest/.test(topic)){s.flags.reported=true;return C.teachings.Honesty.invitation+'\n'+C.dialogue.rose.leak+teaching(s,'Honesty');}
   if(name==='rose'&&/tree|care|share/.test(topic)){s.flags.treeCare=true;note(s,'tree','Care for the grove',C.dialogue.rose.tree);return C.dialogue.rose.tree;}
@@ -154,7 +160,7 @@ function give(s,id,name){
   return `${name} does not need ${C.items[id]?.name||id} right now. You keep it; try ASK ${name.toUpperCase()} ABOUT a relevant topic.`;
 }
 function ending(s){return 'THE TABLE IS READY\nThe trail folds back into an ordinary northern Minnesota evening. Cousins carry dishes; someone rescues the potatoes. June finishes the cooking with the family and sets your four small contributions among everyone else’s work.\n“Four seasons, and you still beat the cousin with the folding chairs,” Grandma says.\n'+(s.flags.reported?'Rose’s repaired joint made the spring work possible. ':'')+(s.flags.contextCompared?'Eli’s notes and Dan’s measurements found a useful conversation across time. ':'')+'Leena remembers that you kept your promise; Ada and Tess know you worked with them, not instead of them.\n'+(s.flags.stickTaken?'June notices the unnecessary stick. “That is not a vegetable. Put it outside.”':'June gives you her good spoon. “You may stir. This is a promotion.”')+'\nYou helped bring people and a meal together. There is no authenticity score, only a table with room for you. JOURNAL keeps the record; RESTART begins another visit.';}
-export function journalText(s){return `FEAST JOURNAL\nGoal: ${currentGoal(s)}\nContributions: ${contributions.map(id=>`${id}: ${s.flags['delivered:'+id]?'at the table':s.flags[id]?'gathered':'still needed'}`).join(' · ')}\n\n${s.journal.length?s.journal.map(j=>j.title+'\n'+j.text).join('\n\n'):'Your notebook is waiting for its first entry.'}\n\nVOCABULARY\n${s.vocabulary.map(id=>{const v=C.vocabulary.find(v=>v.id===id);return v.ojibwe?`${v.ojibwe} — ${v.english}`:`${v.english} — Ojibwe term pending verified local review`;}).join('\n')}\n\n${C.teachingNote}\n${C.languageNote}`;}
+export function journalText(s){return `FEAST JOURNAL\nGoal: ${currentGoal(s)}\nContributions: ${contributions.map(id=>`${id}: ${s.flags['delivered:'+id]?'at the table':s.flags[id]?'gathered':'still needed'}`).join(' · ')}\n\n${s.journal.length?s.journal.map(j=>j.title+'\n'+j.text).join('\n\n'):'Your notebook is waiting for its first entry.'}\n\nVOCABULARY\n${s.vocabulary.map(id=>{const v=C.vocabulary.find(v=>v.id===id);return v.ojibwe?`${v.ojibwe} — ${v.english}${v.grammarNote?'\n'+v.grammarNote:''}\nSource: ${C.sources[v.source].title}${v.speakerContext?' · recorded speaker: '+v.speakerContext:''}\n${v.primaryEntry}`:`${v.english} — Ojibwe term pending verified local review`;}).join('\n')}\n\n${C.teachingNote}\n${C.languageNote}`;}
 export function mapText(s){return 'EXPLORED MAP\n'+s.visited.map(id=>`${C.locations[id].name} [${C.locations[id].season} · ${C.locations[id].time}]\n  ${Object.entries(C.locations[id].exits).filter(([,to])=>s.visited.includes(to)).map(([dir,to])=>dir+' → '+C.locations[to].name).join(' · ')||'No explored connections yet.'}`).join('\n')+'\nGO plus a visited place retraces the connecting paths. LOOK reveals the exits from your current place.';}
 export const helpText='COMMANDS\nLOOK / L · EXAMINE object / X object · TAKE object · DROP object · INVENTORY / I\nNORTH / N · SOUTH / S · EAST / E · WEST / W · SOUTHEAST / SE · NORTHWEST / NW · GO destination\nTALK TO character · ASK character ABOUT topic · USE object [ON target] · GIVE object TO character\nPICK BERRIES · COLLECT SAP · SORT RICE · FISH · WAIT\nHINT (three levels per puzzle step) · JOURNAL · MAP · SAVE · LOAD · RESTART (asks first)\nEnglish commands and aliases work; no Ojibwe spelling is required. Arrow Up/Down recalls commands. GO a named place retraces connecting paths; locked seasons remain locked. Nothing dies, essential objects can be recovered, and mistakes can be repaired.';
 function hint(s){

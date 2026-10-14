@@ -12,7 +12,7 @@ try{
   const executablePath=process.env.CHROMIUM_PATH||(existsSync('/usr/bin/chromium')?'/usr/bin/chromium':undefined);
   browser=await chromium.launch({executablePath,headless:true,args:['--no-sandbox']});
   const p=await browser.newPage({viewport:{width:1366,height:768}});p.on('pageerror',e=>errors.push(e.message));
-  await p.goto('http://127.0.0.1:8011/');await p.locator('#command').waitFor();
+  await p.goto('http://127.0.0.1:8011/');await p.locator('#command').waitFor();assert.match(await p.locator('#word-cards').textContent(),/nookomis.*my grandmother/);
   const command=async text=>{await p.locator('#command').fill(text);await p.locator('#command').press('Enter');};
   await command('talk to grandma');await command('save');await command('take list');await command('load');
   assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem('four-seasons-autosave-v2')).inventory.includes('list')),false);

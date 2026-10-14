@@ -4,20 +4,15 @@
 
 All source metadata, candidate vocabulary, teaching explanations, cultural/safety framing, character dialogue, and location descriptions are in [`src/content.js`](src/content.js). See [`SOURCE_NOTES.md`](SOURCE_NOTES.md) for the source-access record.
 
-## Language
+## Language and character names
 
-Source access to the Ojibwe People’s Dictionary was denied by the development environment. No Ojibwe translation or pronunciation is asserted in this draft. The game displays English, with “Ojibwe term pending verified local review” in its vocabulary journal. Earlier prototype vocabulary has been removed from the playable site.
+Live Ojibwe People’s Dictionary access still returns a network-policy 403. The playable draft now uses words checked in published OPD-derived archival records and corroborating Freelang data. See `SOURCE_NOTES.md` for pinned sources, exact entry links, speaker/community contexts, and limits. This change establishes a lexical basis, not local approval of the game.
 
-| English concept | Candidate, not verified | Needed review |
-| --- | --- | --- |
-| water | nibi | Confirm entry, spelling, meaning, dialect and speaker/community context |
-| maple syrup | none | Select a locally appropriate word and context |
-| blueberries | none | Confirm word/form appropriate to this gathering scene |
-| wild rice | manoomin | Confirm entry and cultural/contextual usage |
-| fish | giigoonh | Confirm entry, grammar and specificity |
-| grandmother | none | Select appropriate kinship form; do not assume an English label maps to one standalone form |
+Review the preferred local forms and usage of **nibi**, **zhiiwaagamizigan**, **ziinzibaakwadwaaboo**, **miin/miinan**, **manoomin**, **giigoonh**, **nookomis**, **ziigwan**, **niibin**, **dagwaagin**, and **biboon**. The seasons are taught with the source’s sentence meanings (e.g. “it is spring”); *nookomis* means “my grandmother.” Check exact current dictionary records once access is restored. Preserve each entry’s provenance and do not substitute a single dialect label for all speaker communities.
 
-Candidates appear only in review metadata, not in player-facing vocabulary. For approved terms, fill each `ojibwe`, `dialect`, `status`, and `source` field in the central file; record exact entry URLs and speaker/community metadata there. Keep English commands accepted. Audio is absent; do not add synthetic “Ojibwe pronunciation.”
+Three characters try author-created story nicknames: Nora **Waaban** (“it is dawn / morning”), Rose **Waabigwan** (“a flower”), and Leena **Niibin** (“it is summer”). These are sourced ordinary words used as fictional nickname proposals, not asserted naming customs, bestowed names, or copied names of real speakers. Review their suitability locally and change/remove them if needed. Grandma June remains June; *nookomis* appears as the player’s relationship term. Other characters retain their names.
+
+All vocabulary, name aliases, context, and source metadata remain editable in `src/content.js`. English commands continue to work. No fake pronunciation, synthetic Ojibwe audio, or invented Ojibwe sentences are included.
 
 ## Teachings
 

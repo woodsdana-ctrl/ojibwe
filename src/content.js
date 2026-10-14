@@ -2,21 +2,282 @@
 export const content={
   title:'Four Seasons to Grandma’s Table',
   framing:'A fictional northern Minnesota family adventure. Time travel is a storytelling invention, not an Ojibwe belief or traditional story. This classroom draft has not been culturally reviewed.',
-  languageNote:'English is used for vocabulary pending source verification. Ojibwe terms will be added only after local language review. No pronunciation is invented.',
+  languageNote:'Ojibwe words are checked against published archival dictionary resources, with English meanings beside them. Live dictionary access and local classroom review remain pending. No pronunciation or new Ojibwe sentences are invented.',
   sources:[
-    {title:'Ojibwe People’s Dictionary',url:'https://ojibwe.lib.umn.edu/',context:'University of Minnesota collaborative dictionary with speaker-specific entries; dialect must be recorded per selected entry.',status:'Network access denied during development. Candidate words are NOT verified or displayed as Ojibwe in the game.'},
+    {title:'Ojibwe People’s Dictionary',url:'https://ojibwe.lib.umn.edu/',context:'University of Minnesota collaborative dictionary with speaker-specific entries; dialect must be recorded per selected entry.',status:'Live access returned proxy 403. Entry forms and meanings were checked through published OPD-derived and independent dictionary exports; current live checking remains pending.'},
     {title:'Local American Indian Education partners',url:null,context:'Invite northern Minnesota school district and relevant tribal education/language partners; no endorsement or participation is claimed.',status:'Review needed before classroom use; not yet completed.'},
     {title:'University of Minnesota Extension',url:'https://extension.umn.edu/',context:'Potential maple production and regional science review source, not a cultural authority.',status:'Specific pages and claims need verification.'},
-    {title:'Minnesota Department of Natural Resources',url:'https://www.dnr.state.mn.us/',context:'Potential local ecology and fishing safety review source, not a substitute for cultural partners.',status:'Specific pages and claims need verification.'}
+    {title:'Minnesota Department of Natural Resources',url:'https://www.dnr.state.mn.us/',context:'Potential local ecology and fishing safety review source, not a substitute for cultural partners.',status:'Specific pages and claims need verification.'},
+    {"title": "OjibweLexicon / OjibweMorph, ELF Lab", "url": "https://github.com/ELF-Lab/OjibweLexicon/tree/dba4e5c008c886d4835e64150f97e25b26b3dab1", "context": "Public academic OPD-derived lexical data. Citation: Hammerly, Livesay, Arppe, Stacey & Silfverberg (2026), OjibweMorph. The lexical CSVs verify lemmas and OPD entry URLs, not English glosses.", "status": "Accessed; exact lexical rows checked. This does not establish local content approval."},
+    {"title": "Published archival OPD export (2020)", "url": "https://github.com/jacobsolinsky/opd/blob/960b9c95ce13743053ee03246698a4c331ccbb83/dataEntry/all_entries3.json", "speakerMetadata": "https://github.com/jacobsolinsky/opd/blob/960b9c95ce13743053ee03246698a4c331ccbb83/database/speakers.json", "context": "Third-party archival OPD records including glosses, basic forms, original entry paths, and speaker metadata. Last repository commit 2020-08-13. This is a secondary archive, not current live OPD access.", "status": "Accessed; selected definitions/forms and recorded speaker contexts checked."},
+    {"title": "Freelang Ojibwe dictionary export", "url": "https://github.com/george-steel/ojibwe-dict-app/blob/a7865eac8337348c13f5964afab5804a783f8981/data/dictionary.tsv", "provenance": "https://github.com/george-steel/ojibwe-dict-app/blob/a7865eac8337348c13f5964afab5804a783f8981/data/ojibwe_readme.pdf", "context": "Compiled by Weshki-ayaad, Charlie Lippert, and Guy Gambill. Provenance document credits consulted Mille Lacs and Bois Forte educators; unmarked entries default to Southwestern/Minnesota in double-vowel spelling. This is an independent corroborating resource, not the OPD.", "status": "Accessed; selected entries and provenance checked."}
   ],
   vocabulary:[
-    {id:'water',english:'water',ojibwe:null,candidate:'nibi',source:0,dialect:null,status:'pending verification'},
-    {id:'syrup',english:'maple syrup',ojibwe:null,candidate:null,source:0,dialect:null,status:'translation needed'},
-    {id:'berries',english:'blueberries',ojibwe:null,candidate:null,source:0,dialect:null,status:'translation needed'},
-    {id:'rice',english:'wild rice',ojibwe:null,candidate:'manoomin',source:0,dialect:null,status:'pending verification'},
-    {id:'fish',english:'fish',ojibwe:null,candidate:'giigoonh',source:0,dialect:null,status:'pending verification'},
-    {id:'grandma',english:'grandmother',ojibwe:null,candidate:null,source:0,dialect:null,status:'verify kinship form and grammatical context'}
-  ],
+  {
+    "id": "water",
+    "english": "water",
+    "ojibwe": "nibi",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/nibi-ni",
+    "dialect": null,
+    "speakerContext": "Nancy Jones — Nigigoonsiminikaaning",
+    "sourceLine": 76593,
+    "status": "attested in published archival resources; live/local review pending"
+  },
+  {
+    "id": "syrup",
+    "english": "maple syrup",
+    "ojibwe": "zhiiwaagamizigan",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/zhiiwaagamizigan-ni",
+    "dialect": null,
+    "speakerContext": "Nancy Jones — Nigigoonsiminikaaning",
+    "sourceLine": 56788,
+    "status": "attested in published archival resources; live/local review pending"
+  },
+  {
+    "id": "berries",
+    "english": "blueberries",
+    "ojibwe": "miinan",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/miin-ni",
+    "dialect": null,
+    "speakerContext": "Eugene Stillday — Obaashiing / Red Lake",
+    "sourceLine": 67914,
+    "status": "attested in published archival resources; live/local review pending",
+    "lemma": "miin",
+    "grammarNote": "miin means a blueberry; miinan is its recorded plural.",
+    "aliases": [
+      "miin"
+    ]
+  },
+  {
+    "id": "rice",
+    "english": "wild rice",
+    "ojibwe": "manoomin",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/manoomin-ni",
+    "dialect": null,
+    "speakerContext": "Leona Wakonabo — Cha-cha-bah-ning / Leech Lake",
+    "sourceLine": 63630,
+    "status": "attested in published archival resources; live/local review pending"
+  },
+  {
+    "id": "fish",
+    "english": "a fish",
+    "ojibwe": "giigoonh",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/giigoonh-na",
+    "dialect": null,
+    "speakerContext": "Gerri Howard — Cha-cha-bah-ning / Leech Lake",
+    "sourceLine": 43859,
+    "status": "attested in published archival resources; live/local review pending"
+  },
+  {
+    "id": "grandma",
+    "english": "my grandmother",
+    "ojibwe": "nookomis",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/nookomis-nad",
+    "dialect": null,
+    "speakerContext": "Eugene Stillday — Obaashiing / Red Lake",
+    "sourceLine": 82907,
+    "status": "attested in published archival resources; live/local review pending",
+    "grammarNote": "First-person possessed singular: my grandmother. This is a relationship term, not June’s personal name."
+  },
+  {
+    "id": "sap",
+    "english": "maple sap",
+    "ojibwe": "ziinzibaakwadwaaboo",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/ziinzibaakwadwaaboo-ni",
+    "dialect": null,
+    "speakerContext": null,
+    "sourceLine": 99900,
+    "status": "attested in published archival resources; live/local review pending"
+  },
+  {
+    "id": "spring",
+    "english": "it is spring",
+    "ojibwe": "ziigwan",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/ziigwan-vii",
+    "dialect": null,
+    "speakerContext": "Eugene Stillday — Obaashiing / Red Lake",
+    "sourceLine": 99482,
+    "status": "attested in published archival resources; live/local review pending",
+    "grammarNote": "The cited OPD lemma is an inanimate intransitive verb; its meaning is a complete it-is expression."
+  },
+  {
+    "id": "summer",
+    "english": "it is summer",
+    "ojibwe": "niibin",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/niibin-vii",
+    "dialect": null,
+    "speakerContext": "Eugene Stillday — Obaashiing / Red Lake",
+    "sourceLine": 76640,
+    "status": "attested in published archival resources; live/local review pending",
+    "grammarNote": "The cited OPD lemma is an inanimate intransitive verb; its meaning is a complete it-is expression."
+  },
+  {
+    "id": "fall",
+    "english": "it is fall / autumn",
+    "ojibwe": "dagwaagin",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/dagwaagin-vii",
+    "dialect": null,
+    "speakerContext": "Eugene Stillday — Obaashiing / Red Lake",
+    "sourceLine": 29947,
+    "status": "attested in published archival resources; live/local review pending",
+    "grammarNote": "The cited OPD lemma is an inanimate intransitive verb; its meaning is a complete it-is expression."
+  },
+  {
+    "id": "winter",
+    "english": "it is winter",
+    "ojibwe": "biboon",
+    "source": 5,
+    "corroboratingSources": [
+      4,
+      6
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/biboon-vii",
+    "dialect": null,
+    "speakerContext": null,
+    "sourceLine": 21490,
+    "status": "attested in published archival resources; live/local review pending",
+    "grammarNote": "The cited OPD lemma is an inanimate intransitive verb; its meaning is a complete it-is expression."
+  },
+  {
+    "id": "flower",
+    "english": "a flower",
+    "ojibwe": "waabigwan",
+    "source": 6,
+    "corroboratingSources": [
+      4
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/waabigwan-ni",
+    "dialect": null,
+    "speakerContext": null,
+    "sourceLine": 84119,
+    "status": "attested in published archival resources; live/local review pending"
+  },
+  {
+    "id": "dawn",
+    "english": "it is dawn / morning",
+    "ojibwe": "waaban",
+    "source": 6,
+    "corroboratingSources": [
+      4
+    ],
+    "primaryEntry": "https://ojibwe.lib.umn.edu/main-entry/waaban-vii",
+    "dialect": null,
+    "speakerContext": null,
+    "sourceLine": 83713,
+    "status": "attested in published archival resources; live/local review pending",
+    "grammarNote": "The cited OPD lemma is an inanimate intransitive verb; its meaning is a complete it-is expression."
+  }
+],
+  characters:{
+  "grandma": {
+    "name": "June",
+    "aliases": [
+      "june",
+      "grandma june",
+      "grandmother",
+      "nookomis"
+    ],
+    "relationshipTerm": "nookomis",
+    "note": "nookomis means my grandmother; June remains her personal name."
+  },
+  "nora": {
+    "name": "Nora",
+    "nickname": "Waaban",
+    "aliases": [
+      "waaban"
+    ],
+    "word": "dawn",
+    "note": "Fictional story nickname from a sourced ordinary word; not a documented customary personal or ceremonial name."
+  },
+  "rose": {
+    "name": "Rose",
+    "nickname": "Waabigwan",
+    "aliases": [
+      "waabigwan"
+    ],
+    "word": "flower",
+    "note": "Fictional story nickname from a sourced ordinary word; not a documented customary personal or ceremonial name."
+  },
+  "leena": {
+    "name": "Leena",
+    "nickname": "Niibin",
+    "aliases": [
+      "niibin"
+    ],
+    "word": "summer",
+    "note": "Fictional story nickname inspired by the sourced expression it is summer; not a documented naming tradition."
+  },
+  "eli": {
+    "name": "Eli",
+    "aliases": []
+  },
+  "dan": {
+    "name": "Dan",
+    "aliases": []
+  },
+  "ada": {
+    "name": "Ada",
+    "aliases": []
+  },
+  "tess": {
+    "name": "Tess",
+    "aliases": [
+      "aunt",
+      "aunt tess"
+    ]
+  }
+},
+  namingNote:"Waaban, Waabigwan, and Niibin are author-created nickname choices using attested words. The translations are sourced; suitability as character nicknames remains for local review. They are not presented as bestowed names or naming customs.",
   teachings:{
     Wisdom:{explanation:'Use what you learn, and seek other people’s knowledge when your own is incomplete.',invitation:'Nora calls this practicing Wisdom: compare the temperature log with Rose’s observations before collecting sap.',experience:'You combined a present-day temperature log with Rose’s experience in the earlier sugar grove.'},
     Honesty:{explanation:'Describe what happened accurately, including your own mistakes; a repair can begin there.',invitation:'Rose calls this Honesty: say that the joint leaks before trying to fix it. “The bucket does not care whose fault it is.”',experience:'You reported the leaking joint honestly so a shared repair could begin.'},
@@ -30,12 +291,12 @@ export const content={
   rice:{process:'Ada’s relatives have already completed the long preparation of this batch and allowed it to cool. Your supervised contribution is inspecting and sorting a small tray, not harvesting or making fresh rice instantly edible.',ecology:'Dan explains that water conditions, habitat, and a plant’s seasonal life cycle are connected. One water reading cannot describe an entire season; local observations and repeated measurements matter.',review:'The fictional supervised sorting sequence and nonspecific prior processing must be reviewed by local partners. No harvesting method, ceremony, dates, ownership rules, or detailed processing technique is asserted.'},
   safety:{berries:'Leena knows this maintained family blueberry plot and has marked the rows to use. This is not an edible-plant identification lesson; never identify or eat unknown plants from this game.',ice:'Tess has already assessed this established location using local expertise and current guidance. You follow her checked route and fish only with her. Appearance alone cannot establish ice safety; this game provides no ice-assessment instructions.'},
   locations:{
-    kitchen:{name:'Grandma June’s Kitchen',season:'Present day',time:'2026',chapter:'Home',description:'The oven timer is arguing with Grandma June. She wins by unplugging it. “The family is bringing most of dinner. I need four contributions: syrup, berries, prepared rice, and fish. Also, whoever borrowed my good spoon owes me an explanation.” A tote and a feast list wait beside a family photo. The trail is north.',exits:{north:'trail'},objects:['tote','list','photo','table'],characters:['grandma']},
+    kitchen:{name:'Grandma June’s Kitchen',season:'Present day',time:'2026',chapter:'Home',description:'Nookomis—my grandmother, June—is arguing with the oven timer. She wins by unplugging it. “The family is bringing most of dinner. I need four contributions: syrup, berries, prepared rice, and fish. Also, whoever borrowed my good spoon owes me an explanation.” A tote and a feast list wait beside a family photo. The trail is north.',exits:{north:'trail'},objects:['tote','list','photo','table'],characters:['grandma']},
     trail:{name:'The Familiar Trail',season:'Between seasons',time:'A fictional fold in time',chapter:'Trail',description:'The same split pine stands beside four paths, each wearing a different season. Your tote crosses the folds with its contents unchanged; this is story magic, not food-storage science or a traditional teaching. A completely unnecessary stick lies here. The kitchen is south; spring is east, summer north, fall west, and winter southeast.',exits:{south:'kitchen',east:'weather',north:'summeredge',west:'landing',southeast:'hut'},objects:['pine','stick'],characters:[]},
-    weather:{name:'School Weather Station',season:'Spring',time:'2026',chapter:'Spring',description:'Nora, an Ojibwe student running the school weather project, has taped a graph to the station. A pail and a spare food-contact gasket sit in her repair kit. “The graph has more drama than the robotics club.” West returns to the trail; east passes the same pine into an earlier spring.',exits:{west:'trail',east:'grove'},objects:['temperature log','pail','gasket','graph'],characters:['nora']},
-    grove:{name:'Rose’s Maple Grove',season:'Spring',time:'1926 · fictional earlier spring',chapter:'Spring',description:'Rose, an Ojibwe family member who repairs the group’s equipment, studies a collection joint that is leaking. The trees have already been selected and tapped by experienced adults. You are helping with their existing collection setup, not learning to tap trees. West is the weather station; east is the sugarhouse.',exits:{west:'weather',east:'sugarhouse'},objects:['joint','spout','tree'],characters:['rose']},
+    weather:{name:'School Weather Station',season:'Spring',time:'2026',chapter:'Spring',description:'Nora, nicknamed Waaban in this fictional story (the sourced expression means it is dawn), is an Ojibwe student running the school weather project and has taped a graph to the station. A pail and a spare food-contact gasket sit in her repair kit. “The graph has more drama than the robotics club.” West returns to the trail; east passes the same pine into an earlier spring.',exits:{west:'trail',east:'grove'},objects:['temperature log','pail','gasket','graph'],characters:['nora']},
+    grove:{name:'Rose’s Maple Grove',season:'Spring',time:'1926 · fictional earlier spring',chapter:'Spring',description:'Rose, nicknamed Waabigwan in this fictional story (flower), is an Ojibwe family member who repairs the group’s equipment and studies a collection joint that is leaking. The trees have already been selected and tapped by experienced adults. You are helping with their existing collection setup, not learning to tap trees. West is the weather station; east is the sugarhouse.',exits:{west:'weather',east:'sugarhouse'},objects:['joint','spout','tree'],characters:['rose']},
     sugarhouse:{name:'The Working Sugarhouse',season:'Spring',time:'1926 · fictional earlier spring',chapter:'Spring',description:'An ongoing batch is being tended by the family. Steam softens the window; work does not soften itself. Rose’s cousin Eli tends the process. A notebook records observations of the same lakeshore through earlier seasons. West returns to the grove.',exits:{west:'grove'},objects:['boiler','notebook'],characters:['eli']},
-    summeredge:{name:'Summer Picnic Shelter',season:'Summer',time:'2026',chapter:'Summer',description:'Leena, Grandma’s niece, maintains the family’s blueberry plot. She holds a basket and a sturdy clip. “I have one job for you and one job for physics. Physics is late.” East is the marked patch. South returns to the trail.',exits:{east:'patch',south:'trail'},objects:['basket','clip','sign'],characters:['leena']},
+    summeredge:{name:'Summer Picnic Shelter',season:'Summer',time:'2026',chapter:'Summer',description:'Leena, Grandma’s niece, goes by the fictional nickname Niibin (it is summer) and maintains the family’s blueberry plot. She holds a basket and a sturdy clip. “I have one job for you and one job for physics. Physics is late.” East is the marked patch. South returns to the trail.',exits:{east:'patch',south:'trail'},objects:['basket','clip','sign'],characters:['leena']},
     patch:{name:'The Marked Blueberry Plot',season:'Summer',time:'2026',chapter:'Summer',description:'The marked rows are Leena’s known blueberry plants. Her ripe-fruit markers separate today’s share from fruit that stays. A picnic cloth on the packing stand keeps flapping across the basket area whenever the wind gusts. It appears to have applied for a pilot’s license. West is the shelter.',exits:{west:'summeredge'},objects:['berries','cloth','markers','wind'],characters:['leena']},
     landing:{name:'Lakeshore Field Station',season:'Fall',time:'2026',chapter:'Fall',description:'Dan, an Ojibwe watershed technician, compares repeated water readings on a field panel. A water chart shows the current season. Across a fold by the old dock, the family rice shed waits in an earlier fall. East is the shed; north returns to the trail.',exits:{east:'shed',north:'trail'},objects:['water chart','water panel','water','dock'],characters:['dan']},
     shed:{name:'The Family Rice Shed',season:'Fall',time:'1926 · fictional earlier fall',chapter:'Fall',description:'Ada and several relatives have spent hours preparing a rice batch. Your part is one small tray of the already processed, cooled rice. A wash basin and sorting table wait nearby. “You may help. You may not rename everyone’s work ‘my discovery.’” West returns to Dan’s station.',exits:{west:'landing'},objects:['tray','basin','sorting table','rice'],characters:['ada']},

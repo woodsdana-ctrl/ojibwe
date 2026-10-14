@@ -1,6 +1,6 @@
 # Teacher guide: Four Seasons to Grandma’s Table
 
-**Audience:** high school. **Status:** playable classroom draft; not culturally reviewed. Coordinate review with local American Indian Education and appropriate tribal language/education partners before classroom use. Vocabulary currently uses English placeholders because source access was unavailable.
+**Audience:** high school. **Status:** playable classroom draft; not culturally reviewed. Coordinate review with local American Indian Education and appropriate tribal language/education partners before classroom use. Vocabulary is now checked against published archival dictionary resources; English meanings and commands remain available. Live dictionary checking and local preferred forms still need review.
 
 ## Learning goals
 

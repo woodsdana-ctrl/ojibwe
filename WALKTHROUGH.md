@@ -104,3 +104,7 @@ GIVE FISH TO GRANDMA
 - If a command is unclear, include the object, target, character, or topic. `ASK` prompts for who and what; `GIVE` prompts for both parts. `HELP` lists the grammar.
 
 Normal completion practices Honesty and Wisdom in spring, Respect and Love in summer, Truth and Humility in fall, and Bravery/Courage in winter. Journal entries connect each action to its reflection. These are fictional classroom applications pending local review, not authenticity scores.
+
+## Optional Ojibwe commands and names
+
+English commands above remain valid. You can also use `TALK TO NOOKOMIS`, `TALK TO WAABAN` (Nora), `ASK WAABIGWAN ABOUT LEAK` (Rose), `ASK NIIBIN ABOUT SHARE` (Leena), and `GO NIIBIN` (summer). At the appropriate steps, `GIVE ZIINZIBAAKWADWAABOO TO ELI`, `GIVE ZHIIWAAGAMIZIGAN TO NOOKOMIS`, `GIVE MIINAN TO NOOKOMIS`, `GIVE MANOOMIN TO NOOKOMIS`, and `GIVE GIIGOONH TO NOOKOMIS` are accepted. Word cards and JOURNAL provide meanings and source context; spelling them is optional. Nicknames are fiction, not claims about naming customs.
