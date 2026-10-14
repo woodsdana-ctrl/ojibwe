@@ -16,7 +16,7 @@ Language now appears in the food list, dialogue, inventory, ASK topics, and a sa
 
 The setting is a fictional family near Cass Lake on the Leech Lake Reservation. June’s present rental, household, ancestors, photo, and personal property history are invented. No Band-owned lease or specific family displacement is claimed. The kitchen photo is not an archival image of real people.
 
-Review the required records-room task and its treatment of **1855** reservation establishment, **1889** Nelson Act allotment/sales, **1948–1959** sales without required consent, the **2020** partial restoration law, and optional **2024** reporting. The court and statute provide federal accounts; the newspaper reports a tribal leader’s perspective. Seek a locally appropriate tribal historical account and verify classroom wording alongside these sources.
+Review the required records-room task and its treatment of **1855** reservation establishment, **1889** Nelson Act allotment/sales, **1948–1959** sales without required consent, the **2020** partial restoration law, and optional **2024** reporting. Official treaty and statute facsimiles provide English legal/federal accounts; the newspaper reports a tribal leader’s perspective. The treaty also names Ojibwe delegates, but does not contain the full negotiations or all community understandings. Seek a locally appropriate tribal historical account and verify classroom wording alongside these sources.
 
 The map is explicitly an illustrative boundary diagram, not a real survey or deed. Boundaries, ownership, sovereignty, and treaty rights are different concepts; the game’s three-card task does not exhaust them. A current home does not establish uninterrupted ownership or a completed remedy. Players cannot prevent or repair dispossession through the time-travel plot. Review the placement of humor so historical harm is never its target.
 
@@ -34,3 +34,9 @@ The played 1926/2026 scenes and dated historical cards are separate. Check that 
 ## Review record
 
 Record the reviewer’s role/community only with consent, date, scope, exact changes, and unresolved items. No reviewer or approval is recorded yet. The revised estimate of 28–30 minutes still needs a student pacing pilot after content review.
+
+## Source shelf and imagery review
+
+Review the original 1855 treaty and 1889 act together, including the latter’s option for allotment where a person lived. The 2020 statute’s findings are retrospective evidence; do not label them as a 1948 deed. Six selected facsimile pages and three complete PDFs are bundled with attribution and checksums. Reproduced images are public-domain federal document pages.
+
+Museum activity photographs and object images are linked to their actual archive pages; no contributed photo is reproduced without a recorded reuse license. Preserve actual dates, places, creators, and unknown metadata. The 1948 ice-fishing image is from April. A drying-rack object image is not a blueberry-harvest scene. The Joseph Corn record is from Lac du Flambeau and an outsider’s administrative viewpoint. Local partners should review whether these comparative sources, captions, and questions fit the intended classroom.

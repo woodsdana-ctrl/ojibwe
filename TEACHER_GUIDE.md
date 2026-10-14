@@ -13,12 +13,12 @@
 
 ## History and fictional chronology
 
-The opening records-room task is required. Players read three cards, compare them, and caption a family photo with a claim the evidence supports. The optional 2024 update extends the discussion.
+The opening records-room task is required. Players read three cards, compare them, and caption a family photo with a claim the evidence supports. The optional 2024 update extends the discussion. **Sources & photos** opens authentic printed treaty/statute pages, full PDFs, exact excerpts, and seasonal archive links. Ask students to compare a readable game card with the original: which words are quoted, and which are our interpretation?
 
 | Date on a historical card | Evidence and purpose |
 | --- | --- |
-| 1855 | Reservation establishment by treaty, as described in a 1998 federal court opinion; the boundary illustration is not a real survey or parcel-title record. |
-| 1889 | Nelson Act allotment and land sales, from that court’s historical account. |
+| 1855 | Reservation establishment by treaty, Article II’s reserved-home language in the original printed treaty; the boundary illustration is not a real survey or parcel-title record. |
+| 1889 | Nelson Act allotment and land sales, in the original statute, including removal/allotment and the proviso permitting allotment on the reservation where a person lived. |
 | 1948–1959 | Sales without majority rightful-owner consent, and a 1959 order to stop, as recorded in Congress’s 2020 findings. |
 | 2020 | Enacted law directing approximately 11,760 acres into trust for the Band: a partial remedy, not proof that every loss was repaired. |
 | 2024 | Archived newspaper reporting on restoration and a tribal leader’s connection between dispossession and housing needs; not a directly consulted tribal release. |
@@ -44,3 +44,9 @@ Language is part of the task, not a spelling test: `ASK NIIBIN ABOUT MIINAN`, `L
 3. Where did an Ojibwe word, another person’s work, or a teaching change what you did? How could a mistaken first attempt be corrected without taking credit for everyone’s contribution?
 
 Keep humor in family banter, kitchen mishaps, and navigation. Dispossession is not a joke or a problem solved by time travel. If students raise a local language, teaching, or historical difference, record it for review rather than treating the game as definitive.
+
+## Reading photographs and original documents
+
+Use `SOURCES` or the button to examine dates, authors, place, captions, and source limitations. The selected legal pages are official published facsimiles—not handwritten manuscripts. The 2020 findings look back at 1948–1959; do not mistake the date of the source for the date of the events it describes. Read the 1889 act’s removal clause and its proviso together.
+
+Museum-photo cards open the original catalogue rather than reproducing restricted images. Keep Cass Lake, Mille Lacs, and Lac du Flambeau separate. The ice-fishing photograph is dated April 1948. Drying-rack objects are not berry-picking activity images. The household survey reflects an official recorder’s judgments; the family’s own voice is missing. Optional source questions can extend the estimated session time.

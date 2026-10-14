@@ -1,4 +1,4 @@
-// Story, language, history, and review metadata: edit these together.
+// Story, language, history, source-library captions, and review metadata: edit these together.
 export const content = {
   "title": "Four Seasons to Grandma’s Table",
   "framing": "A fictional northern Minnesota family adventure. Time travel is a storytelling invention, not an Ojibwe belief or traditional story. This classroom draft has not been culturally reviewed.",
@@ -57,15 +57,14 @@ export const content = {
     {
       "title": "Cass County v. Leech Lake Band of Chippewa Indians, 524 U.S. 103 (1998), historical background",
       "url": "https://github.com/rosthalken/supreme-court-thesis/blob/0310d65a47969e79f560f7c74207d11c3f8ff62d/SupremeCourtCorpusFinalEncoded/ThomasOriginal/Cass%20County%20Minn%20v%20Leech%20Lake%20Band%20of%20Chippewa%20Indians.txt",
-      "context": "Independently hosted transcription of a federal Supreme Court opinion, pp.106–108. It records the 1855 reservation establishment, 1889 Nelson Act/allotment and sales, and later Band land reacquisition. This is a federal court’s historical account, not a tribal account or a present cadastral map.",
-      "status": "Archived opinion text actually consulted. Current tribal historical review remains pending."
+      "context": "This third-party judicial transcription is not included as an authentic source document or relied on for the current source viewer.",
+      "status": "Superseded for the current game by official GovInfo treaty and statute facsimiles; retained only as earlier research provenance."
     },
     {
-      "title": "Leech Lake Band of Ojibwe Reservation Restoration Act, Public Law 116-255 (2020)",
-      "url": "https://github.com/Research-as-a-Code/Research_as_a_Code/blob/8b809174b41204d0059cc32ca2f78141f1efe4b2/data/congress/116_s_199.txt",
-      "originalUrl": "https://www.govinfo.gov/content/pkg/PLAW-116publ255/html/PLAW-116publ255.htm",
-      "context": "Enacted GPO public-law text, approved December 23, 2020, read from an independent archive. Section2 findings identify 1948–1959 sales without majority rightful-owner consent and the 1959 instruction to stop; transfer provisions concern approximately 11,760 acres and a partial remedy.",
-      "status": "Archived enacted text actually consulted. Original federal history host is currently network-denied; no claim of directly fetching it."
+      "title": "Leech Lake Band of Ojibwe Reservation Restoration Act",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-116publ255/pdf/PLAW-116publ255.pdf",
+      "context": "Congress found that federal officials had incorrectly interpreted an order as permitting these sales during 1948–1959, and that the Secretary was advised in 1959 the sales were illegal. The 2020 law directs restoration of approximately 11,760 acres. It is a primary source for the 2020 law and Congress’s findings; it is retrospective evidence about the mid-century sales. A federal law acknowledging wrongful sales and providing a restoration process. It is not an original 1948–1959 sales deed, does not narrate all affected families’ experiences, and does not prove the fictional game family lost a particular parcel.",
+      "status": "Official enacted PDF accessed and fetched directly from GovInfo and visually checked on 2026-10-14; full local PDF and page images included."
     },
     {
       "title": "Daltyn Lofstrom / Forum Communications, Leech Lake restoration report (July 18, 2024)",
@@ -73,6 +72,18 @@ export const content = {
       "originalUrl": "https://www.inforum.com/news/minnesota/minnesotas-leech-lake-band-celebrates-restoration-of-over-11-000-acres-into-tribal-boundaries",
       "context": "Archived newspaper report of the 2024 celebration and Chairman Faron Jackson Sr.’s connection between dispossession, homelessness, and room for future homes. Not a tribal release, not proof of a particular family’s property title.",
       "status": "Archived report actually consulted; exact federal transfer decision not independently checked."
+    },
+    {
+      "title": "Treaty with the Chippewa, February 22, 1855",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-10/pdf/STATUTE-10-Pg1165.pdf",
+      "context": "Article I describes land cessions; Article II reserves tracts including land at Leech Lake, Lake Winnibigoshish, and Cass Lake. A primary source for treaty language about permanent homes. A printed English-language legal record of an agreement signed by U.S. representatives and Ojibwe delegates. It does not contain the full negotiations, oral explanations, or every community member’s understanding. Historical federal wording includes the names Chippewa and Indians.",
+      "status": "Official GovInfo PDF accessed, downloaded and selected printed pages visually checked on 2026-10-14."
+    },
+    {
+      "title": "Nelson Act, January 14, 1889",
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-25/pdf/STATUTE-25-Pg642.pdf",
+      "context": "The act pursued cessions, individual allotments, removal toward White Earth, and sale of pine and agricultural lands. Section 3 ALSO includes a proviso permitting a person to take an allotment on the reservation where they lived instead of removal to White Earth. Do not present the removal clause as proof that everyone left Leech Lake. Federal legislators’ legal plan, including assimilationist language in its title. A statute states what Congress authorized, not by itself everything that actually happened or how families experienced it.",
+      "status": "Official GovInfo PDF accessed, downloaded and selected printed pages visually checked on 2026-10-14."
     }
   ],
   "vocabulary": [
@@ -629,7 +640,7 @@ export const content = {
       "season": "Spring",
       "time": "1926",
       "chapter": "Spring",
-      "description": "You are in spring 1926. Waabigwan, one of the ancestors in Nookomis’s photo, points to the family’s biskitenaagan—a folded-birch-bark sap bucket. Its wooden stand wobbles on uneven ground, tilting the collection basket and spilling sap. “The ground has received quite enough of our share.” Experienced adults already selected and tapped these trees; you help with their existing setup. East is Ishkode’s sugarhouse, also in 1926. West crosses by the split pine back to Waaban’s station in spring 2026. A shaped wooden support lies beside the stand, close enough to help and far enough away to be a nuisance. This ancestor scene takes place after the 1889 Nelson Act’s allotment changes; ask Waabigwan about LAND for the connection to the records you read.",
+      "description": "You are in spring 1926. Waabigwan, one of the ancestors in Nookomis’s photo, points to the family’s biskitenaagan—a folded-birch-bark sap bucket. Its wooden stand wobbles on uneven ground, tilting the collection basket and spilling sap. “The ground has received quite enough of our share.” Experienced adults already selected and tapped these trees; you help with their existing setup. East is Ishkode’s sugarhouse, also in 1926. West crosses by the split pine back to Waaban’s station in spring 2026. A shaped wooden support lies beside the stand, close enough to help and far enough away to be a nuisance. This ancestor scene takes place after the 1889 Nelson Act’s allotment changes; ask Waabigwan about LAND for the connection to the records you read. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "west": "weather",
         "east": "sugarhouse"
@@ -651,7 +662,7 @@ export const content = {
       "season": "Spring",
       "time": "1926",
       "chapter": "Spring",
-      "description": "Still in spring 1926, you find Waabigwan’s cousin Ishkode tending a batch with the family. “Ziinzibaakwadwaaboo comes in. Zhiiwaagamizigan eventually comes out. Sap first, syrup later. The middle part is everybody working.” Steam fogs the window; Ishkode has drawn a face in it. A notebook records observations of the familiar shoreline through earlier seasons. West returns to the grove; beyond it, the split-pine crossing takes you back to 2026.",
+      "description": "Still in spring 1926, you find Waabigwan’s cousin Ishkode tending a batch with the family. “Ziinzibaakwadwaaboo comes in. Zhiiwaagamizigan eventually comes out. Sap first, syrup later. The middle part is everybody working.” Steam fogs the window; Ishkode has drawn a face in it. A notebook records observations of the familiar shoreline through earlier seasons. West returns to the grove; beyond it, the split-pine crossing takes you back to 2026. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "west": "grove"
       },
@@ -669,7 +680,7 @@ export const content = {
       "season": "Summer",
       "time": "2026",
       "chapter": "Summer",
-      "description": "This is summer 2026: Niibin, Nookomis’s niece, maintains the family blueberry plot. No ancestors or century crossings on this path—just miinan, blueberries, and an ambitious picnic cloth. A berry basket and sturdy clip are ready. “I have one job for you and one for physics. Physics has yet to reply.” East is the marked patch, also in 2026. South returns to the split-pine trail and the path home.",
+      "description": "This is summer 2026: Niibin, Nookomis’s niece, maintains the family blueberry plot. No ancestors or century crossings on this path—just miinan, blueberries, and an ambitious picnic cloth. A berry basket and sturdy clip are ready. “I have one job for you and one for physics. Physics has yet to reply.” East is the marked patch, also in 2026. South returns to the split-pine trail and the path home. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "east": "patch",
         "south": "trail"
@@ -688,7 +699,7 @@ export const content = {
       "season": "Summer",
       "time": "2026",
       "chapter": "Summer",
-      "description": "Niibin’s markers separate the ripe miinan for today’s share from fruit that stays. A picnic cloth keeps flapping across the basket’s packing area. It appears to have applied for a pilot’s license. Niibin catches a corner. “It was supposed to be a tablecloth, not a weather event.” West returns to her shelter; there is no time crossing here.",
+      "description": "Niibin’s markers separate the ripe miinan for today’s share from fruit that stays. A picnic cloth keeps flapping across the basket’s packing area. It appears to have applied for a pilot’s license. Niibin catches a corner. “It was supposed to be a tablecloth, not a weather event.” West returns to her shelter; there is no time crossing here. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "west": "summeredge"
       },
@@ -707,7 +718,7 @@ export const content = {
       "season": "Fall",
       "time": "2026",
       "chapter": "Fall",
-      "description": "In fall 2026, your relative Aki compares repeated nibi—water—readings on a field panel. “I asked the lake to fill out a survey. It declined.” His chart describes this year. East, a fold beside the old dock and the familiar shoreline leads to your ancestor Giizhig’s rice shed in fall 1926. North returns to the split-pine trail and home in 2026.",
+      "description": "In fall 2026, your relative Aki compares repeated nibi—water—readings on a field panel. “I asked the lake to fill out a survey. It declined.” His chart describes this year. East, a fold beside the old dock and the familiar shoreline leads to your ancestor Giizhig’s rice shed in fall 1926. North returns to the split-pine trail and home in 2026. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "east": "shed",
         "north": "trail"
@@ -727,7 +738,7 @@ export const content = {
       "season": "Fall",
       "time": "1926",
       "chapter": "Fall",
-      "description": "You are in fall 1926. Giizhig, the third ancestor in Nookomis’s photo, and her relatives have spent hours preparing manoomin—wild rice. Your contribution is one small sorting tray of the processed, cooled batch. A wash basin and sorting table wait nearby. “You may help. You may not rename everyone’s work ‘my discovery.’ That goes for the clipboard people too.” West crosses by the dock back to Aki’s field station in fall 2026. This fictional 1926 family’s ongoing work is one story within the documented history of land loss, not a claim that all families had the same experience.",
+      "description": "You are in fall 1926. Giizhig, the third ancestor in Nookomis’s photo, and her relatives have spent hours preparing manoomin—wild rice. Your contribution is one small sorting tray of the processed, cooled batch. A wash basin and sorting table wait nearby. “You may help. You may not rename everyone’s work ‘my discovery.’ That goes for the clipboard people too.” West crosses by the dock back to Aki’s field station in fall 2026. This fictional 1926 family’s ongoing work is one story within the documented history of land loss, not a claim that all families had the same experience. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "west": "landing"
       },
@@ -746,7 +757,7 @@ export const content = {
       "season": "Winter",
       "time": "2026",
       "chapter": "Winter",
-      "description": "It is winter 2026, and Aunt Biboon has already assessed the family’s established fishing location. “Nookomis asked for giigoonh—a fish. She did not ask for a dramatic rescue.” A rod, line, and mittens are ready. You follow Biboon’s checked route together. East is the fishing shelter, still in 2026. Northwest returns to the split-pine trail; the kitchen path takes you home.",
+      "description": "It is winter 2026, and Aunt Biboon has already assessed the family’s established fishing location. “Nookomis asked for giigoonh—a fish. She did not ask for a dramatic rescue.” A rod, line, and mittens are ready. You follow Biboon’s checked route together. East is the fishing shelter, still in 2026. Northwest returns to the split-pine trail; the kitchen path takes you home. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "east": "shelter",
         "northwest": "trail"
@@ -766,7 +777,7 @@ export const content = {
       "season": "Winter",
       "time": "2026",
       "chapter": "Winter",
-      "description": "Biboon stays with you at the established shelter in winter 2026. She prepared the hole and equipment station. “Our plan is to notice a fish. The fish’s plan is probably different.” The bobber settles, then dips. West follows her checked route to the hut; beyond it the trail leads home to Nookomis.",
+      "description": "Biboon stays with you at the established shelter in winter 2026. She prepared the hole and equipment station. “Our plan is to notice a fish. The fish’s plan is probably different.” The bobber settles, then dips. West follows her checked route to the hut; beyond it the trail leads home to Nookomis. SOURCES offers related archive material with its actual place, date, and source.",
       "exits": {
         "west": "hut"
       },
@@ -783,7 +794,7 @@ export const content = {
       "season": "Present day",
       "time": "2026",
       "chapter": "Home & history",
-      "description": "Near the kitchen, a small community records display holds a reservation boundary diagram, a land record, and a restoration-law card. These are readable summaries with sources, not a pretend deed to Nookomis’s house. The copied family photo has a blank caption. West returns to her kitchen. Your job is to make a caption the evidence can support before following the trail.",
+      "description": "Near the kitchen, a small community records display holds a reservation boundary diagram, a land record, and a restoration-law card. These are readable summaries with sources, not a pretend deed to Nookomis’s house. The copied family photo has a blank caption. West returns to her kitchen. Your job is to make a caption the evidence can support before following the trail. SOURCES opens actual pages and full PDFs; the cards here remain readable game summaries.",
       "exits": {
         "west": "kitchen"
       },
@@ -990,7 +1001,8 @@ export const content = {
     "hole": "Biboon prepared the hole at the established fishing site. Fish only with her and the checked gear. Looking into the hole produces no helpful eye contact.",
     "bobber": "The bobber settles, then dips in a repeating pattern. Ask Biboon about the bite or fish with her assistance. You are observing a fish bite, never judging ice safety. The bobber is doing its job with great seriousness for something so small.",
     "birch bark": "Wiigwaas means birch bark. The biskitenaagan is the family’s folded-birch-bark sap bucket. This object type is documented in historical collections; leave the basket’s seams and the living trees alone.",
-    "rental note": "June’s present-day rental and this family photo are fictional details of the adventure. They show where she lives now, not uninterrupted ownership of ancestral land. Ask Nookomis about HOME and compare the records in the room east."
+    "rental note": "June’s present-day rental and this family photo are fictional details of the adventure. They show where she lives now, not uninterrupted ownership of ancestral land. Ask Nookomis about HOME and compare the records in the room east.",
+    "restoration law": "2020 / REMEDY: the enacted restoration law directs about 11,760 acres to be transferred into trust for the Band. This is a partial remedy. It does not say that every lost parcel returned, that every displaced family returned, or that housing shortages ended."
   },
   "dialogue": {
     "grandma": {
@@ -1214,19 +1226,19 @@ export const content = {
   },
   "history": {
     "setting": "A fictional contemporary family near Cass Lake on the Leech Lake Reservation. June rents her home. Her household, relatives, personal ancestors, photo and rental arrangement are invented; the dated community events below are sourced.",
-    "sourcePerspective": "The law and court opinion are federal accounts; the newspaper records a tribal leader’s public account. Compare their authorship and limits. Local tribal education review is needed before classroom use.",
+    "sourcePerspective": "The printed treaty is an English legal record involving U.S. representatives and named Ojibwe delegates; it omits much oral negotiation and community understanding. The 1889 act is a federal legislative plan; the 2020 law includes retrospective findings. The newspaper records a tribal leader’s public account. Sources and lived experiences are related evidence, not interchangeable.",
     "events": [
       {
         "year": "1855",
         "title": "Reservation established",
-        "text": "The federal court’s 1998 historical account records the Leech Lake Reservation’s establishment by treaty in 1855.",
-        "source": 8
+        "text": "Article II of the 1855 treaty reserved tracts for permanent homes, including tracts at Leech Lake, Lake Winnibigoshish, and Cass Lake. Read the original English legal record alongside its land-cession language.",
+        "source": 11
       },
       {
         "year": "1889",
         "title": "Nelson Act and allotment",
-        "text": "The Nelson Act applied allotment in Minnesota, with parcels assigned to individuals and other land sold through pine-land auctions and agricultural-land sales. The reservation’s boundary and who owned each parcel were different questions.",
-        "source": 8
+        "text": "The 1889 Nelson Act provided for cessions, individual allotments, removal toward White Earth with a proviso allowing allotment where someone already lived, and sale of pine and other lands. The statute does not prove that every Leech Lake family left.",
+        "source": 12
       },
       {
         "year": "1948–1959",
@@ -1248,13 +1260,368 @@ export const content = {
       }
     ],
     "records": {
-      "reservation map": "1855 / BOUNDARIES: this classroom diagram marks a reservation boundary, using the federal court’s historical account. It is an illustration, not an actual survey or a record of who owns every parcel. A reservation on a map does not prove uninterrupted community ownership of all its land.",
-      "land record": "1889 / 1948–1959 / OWNERSHIP: the court describes allotment and land sales under the Nelson Act. The 2020 law’s findings describe later sales without the required owners’ consent and the 1959 order to stop. These records document land loss in the community; they do not name the fictional June’s family parcel.",
+      "reservation map": "1855 / TREATY AND BOUNDARIES: Article II of the treaty reserved tracts for permanent homes, including Leech Lake. This classroom diagram is illustrative, not an actual survey or a record of who owned every parcel. Use SOURCES to inspect the printed treaty page and the full PDF.",
+      "land record": "1889 / 1948–1959 / OWNERSHIP: the Nelson Act combined allotment, removal instructions, an important proviso for allotment where people already lived, and land sales. The 2020 law’s findings describe later sales without the owners’ required consent and the 1959 order to stop. These records document policy and community land loss, not the title of the fictional June’s family parcel. SOURCES opens the original statutes.",
       "restoration law": "2020 / REMEDY: the enacted restoration law directs about 11,760 acres to be transferred into trust for the Band. This is a partial remedy. It does not say that every lost parcel returned, that every displaced family returned, or that housing shortages ended.",
       "restoration update": "2024 / CONTINUING CONSEQUENCES: a newspaper report describes the restoration celebration and the Band chairman’s connection between lost homelands and homelessness. Some people have homes now; other members still need them. June’s rental is a fictional household, not evidence that dispossession is over.",
       "records": "These cards have different dates and purposes: boundary, land loss, and a partial remedy. Read each before comparing them. Neither the photo nor June’s current house can tell you the title history of an individual parcel."
     },
     "comparison": "The boundary map identifies a reservation. The ownership records show why land within it could leave tribal or individual control. The restoration law addresses some of that loss. June’s present-day rental belongs in this continuing story; it cannot prove that her family avoided displacement or that all dispossession was repaired.",
     "caption": "A present-day home and a community history of land loss can both be true. The records document dispossession and a partial remedy; this fictional family photo does not establish anyone’s individual property title."
-  }
+  },
+  "sourceLibrary": [
+    {
+      "id": "treaty1855",
+      "kind": "document",
+      "title": "Treaty with the Chippewa, February 22, 1855",
+      "season": "History",
+      "rooms": [
+        "archive",
+        "kitchen"
+      ],
+      "date": "1855-02-22",
+      "dateNote": "Signed February 22, 1855; ratification proclaimed April 7, 1855 (printed p. 1171).",
+      "place": "Leech Lake and other named Ojibwe communities in Minnesota",
+      "creator": "Agreement between the United States, represented by George W. Manypenny, and named chiefs and delegates of the Mississippi, Pillager, and Lake Winnibigoshish bands of Ojibwe.",
+      "repository": "U.S. Government Publishing Office, GovInfo, United States Statutes at Large",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/STATUTE-10/pdf/STATUTE-10-Pg1165.pdf",
+      "catalogueUrl": "https://www.govinfo.gov/app/details/STATUTE-10/STATUTE-10-Pg1165",
+      "citation": "10 Stat. 1165–1171; Article II on p. 1166",
+      "rights": {
+        "statement": "Public domain: nineteenth-century treaty text and U.S. federal publication. Credit: U.S. Government Publishing Office / GovInfo. This is a facsimile of the printed Statutes at Large, not the original handwritten treaty manuscript.",
+        "url": "https://www.govinfo.gov/about",
+        "canEmbed": true
+      },
+      "imagePath": "./assets/documents/1855-treaty-page-2.png",
+      "pdfPath": "./assets/documents/1855-treaty.pdf",
+      "pages": [
+        {
+          "imagePath": "./assets/documents/1855-treaty-page-1.png",
+          "label": "Printed p.1165 · Article I / land cession"
+        },
+        {
+          "imagePath": "./assets/documents/1855-treaty-page-2.png",
+          "label": "Printed p.1166 · Article II / reserved homes"
+        }
+      ],
+      "transcript": [
+        {
+          "page": "Article I, printed p.1165",
+          "text": "hereby cede, sell, and convey to the United States all their right, title, and interest in, and to, the lands now owned and claimed by them,"
+        },
+        {
+          "page": "Article II, printed p. 1166",
+          "text": "There shall be, and hereby is, reserved and set apart, a sufficient quantity of land for the permanent homes of the said Indians;"
+        }
+      ],
+      "caption": "Authentic printed page from 10 Stat. 1165–1171; Article II on p. 1166. This is a facsimile of the published legal record, not a recreated document or handwritten manuscript.",
+      "context": "Article I describes land cessions; Article II reserves tracts including land at Leech Lake, Lake Winnibigoshish, and Cass Lake. A primary source for treaty language about permanent homes. A printed English-language legal record of an agreement signed by U.S. representatives and Ojibwe delegates. It does not contain the full negotiations, oral explanations, or every community member’s understanding. Historical federal wording includes the names Chippewa and Indians.",
+      "questions": [
+        "What do “permanent homes” promise? What else does Article I ask the bands to give up?",
+        "What would you need beyond this English legal record to understand negotiations and the communities’ views?"
+      ],
+      "presentation": "local-facsimile",
+      "gameConnection": "Compare this original with the readable card in the records room. Sources and game summaries have different purposes."
+    },
+    {
+      "id": "nelson1889",
+      "kind": "document",
+      "title": "Nelson Act, January 14, 1889",
+      "season": "History",
+      "rooms": [
+        "archive",
+        "kitchen"
+      ],
+      "date": "1889-01-14",
+      "dateNote": "",
+      "place": "Leech Lake and other named Ojibwe communities in Minnesota",
+      "creator": "United States Congress; approved by President Grover Cleveland.",
+      "repository": "U.S. Government Publishing Office, GovInfo, United States Statutes at Large",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/STATUTE-25/pdf/STATUTE-25-Pg642.pdf",
+      "catalogueUrl": "https://www.govinfo.gov/app/details/STATUTE-25/STATUTE-25-Pg642",
+      "citation": "Act of January 14, 1889, ch. 24, 25 Stat. 642–646; section 3 on p. 643; sections 5–6 on p. 644",
+      "rights": {
+        "statement": "Public domain: nineteenth-century enacted statute and U.S. federal publication. Credit: U.S. Government Publishing Office / GovInfo. Facsimile of the printed Statutes at Large.",
+        "url": "https://www.govinfo.gov/about",
+        "canEmbed": true
+      },
+      "imagePath": "./assets/documents/1889-nelson-act-page-2.png",
+      "pdfPath": "./assets/documents/1889-nelson-act.pdf",
+      "pages": [
+        {
+          "imagePath": "./assets/documents/1889-nelson-act-page-2.png",
+          "label": "Printed p.643 · Section 3 / removal and its proviso"
+        },
+        {
+          "imagePath": "./assets/documents/1889-nelson-act-page-3.png",
+          "label": "Printed p.644 · Section 5 / pine-land auctions"
+        }
+      ],
+      "transcript": [
+        {
+          "page": "Section 3, printed p. 643",
+          "text": "shall, under the direction of said commissioners, be removed to and take up their residence on the White Earth Reservation"
+        },
+        {
+          "page": "Section 3, printed p.643; “Provided further”",
+          "text": "That any of the Indians residing on any of said reservations may, in his discretion, take his allotment in severalty under this act on the reservation where he lives at the time of the removal herein provided for is effected, instead of being removed to and taking such allotment on White Earth Reservation."
+        },
+        {
+          "page": "Section 5, printed p.644",
+          "text": "the sale of said lands at public auction to the highest bidder for cash"
+        }
+      ],
+      "caption": "Authentic printed page from Act of January 14, 1889, ch. 24, 25 Stat. 642–646; section 3 on p. 643; sections 5–6 on p. 644. This is a facsimile of the published legal record, not a recreated document or handwritten manuscript.",
+      "context": "The act pursued cessions, individual allotments, removal toward White Earth, and sale of pine and agricultural lands. Section 3 ALSO includes a proviso permitting a person to take an allotment on the reservation where they lived instead of removal to White Earth. Do not present the removal clause as proof that everyone left Leech Lake. Federal legislators’ legal plan, including assimilationist language in its title. A statute states what Congress authorized, not by itself everything that actually happened or how families experienced it.",
+      "questions": [
+        "Compare section 3’s removal clause with its “Provided further” paragraph. Does this law prove that everyone left Leech Lake?",
+        "Section 5 prices and auctions timber land. What does that way of valuing a forest include, and what does it leave out?"
+      ],
+      "presentation": "local-facsimile",
+      "gameConnection": "Compare this original with the readable card in the records room. Sources and game summaries have different purposes."
+    },
+    {
+      "id": "restoration2020",
+      "kind": "document",
+      "title": "Leech Lake Band of Ojibwe Reservation Restoration Act",
+      "season": "History",
+      "rooms": [
+        "archive",
+        "kitchen"
+      ],
+      "date": "2020-12-23",
+      "dateNote": "",
+      "place": "Leech Lake and other named Ojibwe communities in Minnesota",
+      "creator": "United States Congress; approved by President Donald J. Trump.",
+      "repository": "U.S. Government Publishing Office, GovInfo",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/PLAW-116publ255/pdf/PLAW-116publ255.pdf",
+      "catalogueUrl": "https://www.govinfo.gov/app/details/PLAW-116publ255",
+      "citation": "Public Law 116–255, 134 Stat. 1139–1141; section 2(a)(1), p. 1139; sections 2(b)(1) and 2(c), p. 1140",
+      "rights": {
+        "statement": "Public domain: enacted U.S. federal statute; U.S. government publication under 17 U.S.C. § 105. Credit: U.S. Government Publishing Office / GovInfo. Official published law, not a recreated document.",
+        "url": "https://www.govinfo.gov/about",
+        "canEmbed": true
+      },
+      "imagePath": "./assets/documents/2020-restoration-page-1.png",
+      "pdfPath": "./assets/documents/2020-restoration.pdf",
+      "pages": [
+        {
+          "imagePath": "./assets/documents/2020-restoration-page-1.png",
+          "label": "Printed p.1139 · Section 2(a) / consent findings"
+        },
+        {
+          "imagePath": "./assets/documents/2020-restoration-page-2.png",
+          "label": "Printed p.1140 · Transfer and trust provisions"
+        }
+      ],
+      "transcript": [
+        {
+          "page": "Section 2(a)(1)(B), printed p. 1139",
+          "text": "the Bureau of Indian Affairs incorrectly interpreted an order of the Secretary of the Interior to mean that the Department of the Interior had the authority to sell tribal allotments without the consent of a majority of the rightful landowners;"
+        }
+      ],
+      "caption": "Authentic printed page from Public Law 116–255, 134 Stat. 1139–1141; section 2(a)(1), p. 1139; sections 2(b)(1) and 2(c), p. 1140. This is a facsimile of the published legal record, not a recreated document or handwritten manuscript.",
+      "context": "Congress found that federal officials had incorrectly interpreted an order as permitting these sales during 1948–1959, and that the Secretary was advised in 1959 the sales were illegal. The 2020 law directs restoration of approximately 11,760 acres. It is a primary source for the 2020 law and Congress’s findings; it is retrospective evidence about the mid-century sales. A federal law acknowledging wrongful sales and providing a restoration process. It is not an original 1948–1959 sales deed, does not narrate all affected families’ experiences, and does not prove the fictional game family lost a particular parcel.",
+      "questions": [
+        "Which dates describe the wrongful sales, and which date belongs to this restoration law?",
+        "What does the approximately 11,760-acre remedy address, and what can this law not tell you about an individual family?"
+      ],
+      "presentation": "local-facsimile",
+      "gameConnection": "Compare this original with the readable card in the records room. Sources and game summaries have different purposes."
+    },
+    {
+      "id": "cass-lake-sugaring",
+      "kind": "photograph",
+      "title": "Maple sugaring at Cass Lake",
+      "originalTitle": "Indians making maple sugar, Cass Lake",
+      "season": "Spring",
+      "rooms": [
+        "weather",
+        "grove",
+        "sugarhouse"
+      ],
+      "date": "Not recorded in the catalogue",
+      "place": "Cass Lake, Minnesota",
+      "creator": "Photographer not recorded",
+      "repository": "Minnesota Historical Society Collections, via the Ojibwe People’s Dictionary",
+      "sourceUrl": "https://ojibwe.lib.umn.edu/collection/indians-making-maple-sugar-cass-lake-820b3f13-4825-4218-ad47-6c5ccfd0c9a0",
+      "caption": "A real archive photograph of maple-sugaring activity at Cass Lake. The catalogue does not identify a date, photographer, or individual people.",
+      "context": "This is geographically relevant activity evidence, not a portrait of the fictional family and not proof of an exact1926 scene. The original catalogue title retains historical wording.",
+      "questions": [
+        "What work, tools, and cooperation can you see?",
+        "Which facts are missing from the catalogue, and what should you avoid guessing?"
+      ],
+      "gameConnection": "Connect the ongoing sugarhouse work to an actual historical photograph.",
+      "missingMetadata": [
+        "Date",
+        "Photographer",
+        "People’s names"
+      ],
+      "rights": {
+        "statement": "Copyright Minnesota Historical Society Collections. This item does not display an open reuse license; the game links to its archive record and does not reproduce the image.",
+        "url": "https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions",
+        "canEmbed": false
+      },
+      "presentation": "archive-link"
+    },
+    {
+      "id": "sap-bucket-making",
+      "kind": "photograph",
+      "title": "Making a birch-bark sap bucket",
+      "season": "Spring",
+      "rooms": [
+        "grove",
+        "sugarhouse"
+      ],
+      "date": "Circa 1956",
+      "place": "Mille Lacs, Minnesota",
+      "creator": "Photographer not recorded",
+      "repository": "Minnesota Historical Society Collections, via the Ojibwe People’s Dictionary",
+      "sourceUrl": "https://ojibwe.lib.umn.edu/collection/making-birch-bark-sap-bucket",
+      "caption": "Historical photograph of making a birch-bark sap bucket at Mille Lacs, circa 1956.",
+      "context": "Mille Lacs is a different community from the Leech Lake family in the story. This photograph provides evidence for an actual practice; it does not document the game’s invented wooden stand or support task.",
+      "questions": [
+        "What can you observe about the material and the work?",
+        "Why should we keep this photograph’s place and date separate from the game’s family and year?"
+      ],
+      "gameConnection": "Look at the documented object type behind biskitenaagan.",
+      "missingMetadata": [
+        "Photographer",
+        "People’s names"
+      ],
+      "rights": {
+        "statement": "Copyright Minnesota Historical Society Collections. This item does not display an open reuse license; the game links to its archive record and does not reproduce the image.",
+        "url": "https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions",
+        "canEmbed": false
+      },
+      "presentation": "archive-link"
+    },
+    {
+      "id": "rice-harvest-photo",
+      "kind": "photograph",
+      "title": "Ojibwe gathering wild rice at Mille Lacs",
+      "season": "Fall",
+      "rooms": [
+        "landing",
+        "shed"
+      ],
+      "date": "Circa 1920",
+      "place": "Mille Lacs, Minnesota",
+      "creator": "Photographer not recorded",
+      "repository": "Minnesota Historical Society Collections, via the Ojibwe People’s Dictionary",
+      "sourceUrl": "https://ojibwe.lib.umn.edu/collection/ojibwe-gathering-wild-rice-at-mille-lacs",
+      "caption": "Actual archive photograph identifying Ojibwe men gathering wild rice in a canoe at Mille Lacs, circa 1920.",
+      "context": "This records harvesting, whereas the game’s small task assists with a later prepared sample. The people are not the fictional characters, and an image does not explain every harvesting rule or community practice.",
+      "questions": [
+        "What evidence of collaboration can you see?",
+        "What parts of preparing manoomin for a meal are outside the frame?"
+      ],
+      "gameConnection": "Distinguish harvesting shown in a primary image from the later rice task in the game.",
+      "missingMetadata": [
+        "Photographer",
+        "People’s names"
+      ],
+      "rights": {
+        "statement": "Copyright Minnesota Historical Society Collections. This item does not display an open reuse license; the game links to its archive record and does not reproduce the image.",
+        "url": "https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions",
+        "canEmbed": false
+      },
+      "presentation": "archive-link"
+    },
+    {
+      "id": "ice-fishing-photo",
+      "kind": "photograph",
+      "title": "Martin Kegg ice fishing",
+      "season": "Winter",
+      "rooms": [
+        "hut",
+        "shelter"
+      ],
+      "date": "April 1948",
+      "place": "Lake Mille Lacs, Minnesota",
+      "creator": "Monroe Killy, photographer",
+      "repository": "Minnesota Historical Society Collections, via the Ojibwe People’s Dictionary",
+      "sourceUrl": "https://ojibwe.lib.umn.edu/collection/martin-kegg-ice-fishing-lake-mille-lacs",
+      "caption": "Martin Kegg using a fish spear while ice fishing at Lake Mille Lacs; photographed by Monroe Killy in April 1948.",
+      "context": "The archive dates this image to April, not winter. The photograph shows a different fishing technique from the game and cannot establish that ice is safe. It is evidence for the recorded activity, person, place, and date—not an instruction sheet.",
+      "questions": [
+        "How does the technique in this image differ from Biboon’s prepared gear?",
+        "What can a photograph never tell you by itself about ice safety?"
+      ],
+      "gameConnection": "Compare an actual historical fishing image with the game’s supervised scene.",
+      "rights": {
+        "statement": "Copyright Minnesota Historical Society Collections. This item does not display an open reuse license; the game links to its archive record and does not reproduce the image.",
+        "url": "https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions",
+        "canEmbed": false
+      },
+      "presentation": "archive-link",
+      "missingMetadata": []
+    },
+    {
+      "id": "food-drying-racks",
+      "kind": "object",
+      "title": "Food-drying racks",
+      "season": "Summer",
+      "rooms": [
+        "summeredge",
+        "patch"
+      ],
+      "date": "Object dates not recorded in the catalogue",
+      "place": "Community/location not recorded",
+      "creator": "Makers and photographer not recorded",
+      "repository": "Minnesota Historical Society Collections, via the Ojibwe People’s Dictionary",
+      "sourceUrl": "https://ojibwe.lib.umn.edu/collection/food-drying-racks",
+      "caption": "A catalogue photograph of two real food-drying-rack objects. The description includes berries among foods dried on such racks.",
+      "context": "This is an object photograph, not a picture of people picking blueberries. The catalogue does not provide a date, community, or maker, so the game does not assign those facts.",
+      "questions": [
+        "How could a preservation object connect a harvest with a later meal?",
+        "What does an object record show that an activity photograph might not—and what context is missing?"
+      ],
+      "gameConnection": "Extend the summer chapter’s gathering into a question about preservation.",
+      "missingMetadata": [
+        "Date",
+        "Community",
+        "Maker",
+        "Photographer"
+      ],
+      "rights": {
+        "statement": "Copyright Minnesota Historical Society Collections. This item does not display an open reuse license; the game links to its archive record and does not reproduce the image.",
+        "url": "https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions",
+        "canEmbed": false
+      },
+      "presentation": "archive-link"
+    },
+    {
+      "id": "joseph-corn-survey",
+      "kind": "record",
+      "title": "Survey of Joseph Corn’s household",
+      "season": "Summer",
+      "rooms": [
+        "archive",
+        "summeredge",
+        "patch"
+      ],
+      "date": "May 10,1922",
+      "place": "Lac du Flambeau Agency, Wisconsin",
+      "creator": "Office of Indian Affairs; survey recorder not identified here",
+      "repository": "Surveys of Indian Industry, National Archives RG 75, via the Ojibwe People’s Dictionary",
+      "sourceUrl": "https://ojibwe.lib.umn.edu/collection/survey-of-joseph-corn",
+      "caption": "An actual1922 administrative household survey. The record describes picking and canning berries and selling strawberries.",
+      "context": "This is an outsider’s administrative description of a household in another Ojibwe community—not a source for the fictional family and not evidence of blueberry picking in this game’s location. Consider the recorder’s judgments and whose voice is absent.",
+      "questions": [
+        "What kinds of work did this household combine?",
+        "How do an official’s judgments differ from a family describing its own skills and choices?"
+      ],
+      "gameConnection": "Read a primary everyday-life record alongside the legal documents.",
+      "missingMetadata": [
+        "Individual recorder"
+      ],
+      "rights": {
+        "statement": "Original 1922 federal administrative record credited to National Archives RG 75. The source shelf links to its catalogue; the game does not reproduce the record image or claim a partner-photo reuse license.",
+        "url": "https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions",
+        "canEmbed": false
+      },
+      "presentation": "archive-link"
+    }
+  ]
 };

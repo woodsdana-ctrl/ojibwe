@@ -55,15 +55,42 @@ The live [biskitenaagan entry](https://ojibwe.lib.umn.edu/main-entry/biskitenaag
 
 That evidence supports the object type and historical setting. It does not document the invented wooden stand/support puzzle, teach manufacture or tapping, or identify the fictional Leech Lake family. The kitchen’s family photo and ancestors are invented; no historical collection image is presented as their portrait.
 
-## Leech Lake historical evidence actually consulted
+## Original primary documents now included
 
-1. [Cass County v. Leech Lake Band of Chippewa Indians, 524 U.S. 103 (1998), pinned opinion transcription](https://github.com/rosthalken/supreme-court-thesis/blob/0310d65a47969e79f560f7c74207d11c3f8ff62d/SupremeCourtCorpusFinalEncoded/ThomasOriginal/Cass%20County%20Minn%20v%20Leech%20Lake%20Band%20of%20Chippewa%20Indians.txt). The federal court’s historical account describes reservation establishment by treaty in **1855** and **1889** Nelson Act allotment, pine-land auctions, and agricultural-land sales. This is a federal judicial account, not a tribal historical account or present parcel map.
-2. [Enacted Public Law 116-255, pinned GPO-text archive](https://github.com/Research-as-a-Code/Research_as_a_Code/blob/8b809174b41204d0059cc32ca2f78141f1efe4b2/data/congress/116_s_199.txt), approved **December 23, 2020**. Congress’s findings describe **1948–1959** allotment sales without consent of a majority of rightful landowners and a **1959** instruction to stop sales identified as illegal. The law directs approximately **11,760 acres** into federal trust for the Band: a partial remedy. The [original federal page](https://www.govinfo.gov/content/pkg/PLAW-116publ255/html/PLAW-116publ255.htm) was network-denied; the archived enacted text was read, and direct federal-host access is not claimed. A 2020 authorization alone does not establish completion of every transfer or return every former owner’s individual parcel.
-3. [Daltyn Lofstrom / Forum Communications, July 18, 2024, pinned newspaper-report archive](https://github.com/Reholly/DataEngineering/blob/8828bf5e41e446aaa6c88bdc9cae83f41aa503c5/data/news/environment3/article_17.json). The report describes a restoration celebration and records Chairman Faron Jackson Sr.’s connection between dispossession, homelessness, and room for future homes. This is newspaper reporting with a tribal leader’s perspective, not a directly consulted tribal release or independently checked federal transfer decision.
+The **Sources & photos** shelf (or typed `SOURCES`) displays actual pages from official GovInfo PDFs, with full local PDFs, accurate excerpts, and source-reading questions. They are authentic printed legal publications, not recreated documents or handwritten treaty manuscripts.
 
-The records-room illustration distinguishes **boundary**, **ownership/land loss**, and **partial remedy**. It is not a real survey, deed, or complete account of sovereignty and treaty rights. Community events do not establish the personal title history or displacement of this invented family. June’s current rental near Cass Lake is a fictional household detail; no specific Band-owned lease, uninterrupted ancestral ownership, or completed remedy is claimed. Direct local tribal historical review and current housing-source verification remain work for the review process.
+| Primary document | Official source | Page images included |
+| --- | --- | --- |
+| Treaty with the Chippewa, February 22, 1855 | [10 Stat. 1165–1171](https://www.govinfo.gov/content/pkg/STATUTE-10/pdf/STATUTE-10-Pg1165.pdf) | pp. 1165–1166: land cession and Article II’s reserved “permanent homes,” including Leech Lake |
+| Nelson Act, January 14, 1889 | [25 Stat. 642–646](https://www.govinfo.gov/content/pkg/STATUTE-25/pdf/STATUTE-25-Pg642.pdf) | pp. 643–644: removal/allotment, the “Provided further” option for allotment where someone lived, and pine-land auctions |
+| Leech Lake Band of Ojibwe Reservation Restoration Act, December 23, 2020 | [Public Law 116–255](https://www.govinfo.gov/content/pkg/PLAW-116publ255/pdf/PLAW-116publ255.pdf) | pp. 1139–1140: retrospective findings about 1948–1959 sales without required consent, and the partial transfer remedy |
 
-The game keeps dated historical evidence separate from the fictional 1926/2026 travel plot. It does not include unverified Sugar Point details or treat helping with a meal as undoing dispossession.
+These PDFs were downloaded directly from GovInfo over verified HTTPS, parsed, and selected pages visually inspected on October 14, 2026. The files in `assets/documents/` are the downloaded PDFs and page images rendered from them. `manifest.json` records source URLs, byte counts, and SHA-256 checksums. Credit: **U.S. Government Publishing Office / GovInfo**. The treaty/statutes are public-domain federal publications. The game’s source shelf distinguishes exact excerpts from contextual interpretation and story notes.
+
+Read the **1889 removal clause together with its proviso**. The statute is not proof that every Leech Lake family left. Read the **2020 consent wording as Congress’s account of an incorrect interpretation**, not as a valid grant of power to sell without consent. The 2020 law is primary evidence for that enacted law and its findings; it is retrospective evidence about the mid-century sales, not an original sales deed. The approximately 11,760-acre remedy does not establish that every lost parcel returned or that every housing need was resolved.
+
+The earlier third-party judicial transcription is superseded for the current documentary evidence. The shelf and updated cards use the direct treaty and statute facsimiles instead. A [2024 archived newspaper report](https://github.com/Reholly/DataEngineering/blob/8828bf5e41e446aaa6c88bdc9cae83f41aa503c5/data/news/environment3/article_17.json) remains clearly identified as secondary reporting, with Chairman Faron Jackson Sr.’s perspective on dispossession and housing needs—not a primary legal document or proof of the invented family’s title.
+
+## Actual seasonal archive material
+
+| Connection | Archive record | What is verified and what is missing |
+| --- | --- | --- |
+| Spring | [Maple sugaring at Cass Lake](https://ojibwe.lib.umn.edu/collection/indians-making-maple-sugar-cass-lake-820b3f13-4825-4218-ad47-6c5ccfd0c9a0) | Actual activity photograph at Cass Lake; date, photographer, and individual people not supplied. Historical catalogue title is preserved separately, with context. |
+| Spring | [Making a birch-bark sap bucket](https://ojibwe.lib.umn.edu/collection/making-birch-bark-sap-bucket) | Mille Lacs, circa 1956; photographer and individual names not supplied. This is not the game’s family or 1926 stand/support task. |
+| Fall | [Ojibwe gathering wild rice at Mille Lacs](https://ojibwe.lib.umn.edu/collection/ojibwe-gathering-wild-rice-at-mille-lacs) | Ojibwe men gathering rice in a canoe, circa 1920; photographer and individual names not supplied. Harvesting differs from the game’s later prepared-rice task. |
+| Ice fishing | [Martin Kegg ice fishing](https://ojibwe.lib.umn.edu/collection/martin-kegg-ice-fishing-lake-mille-lacs) | Martin Kegg; Monroe Killy, photographer; Lake Mille Lacs, **April 1948**. Do not relabel April as winter or infer ice safety from an image. |
+| Summer preservation | [Food-drying racks](https://ojibwe.lib.umn.edu/collection/food-drying-racks) | Two actual museum objects; catalogue mentions drying berries. This is not a blueberry-picking photograph; dates, community, makers, and photographer are not supplied. |
+| Everyday household record | [Survey of Joseph Corn](https://ojibwe.lib.umn.edu/collection/survey-of-joseph-corn) | May 10, 1922, Office of Indian Affairs, Lac du Flambeau Agency, National Archives RG 75. An outsider’s administrative description mentions picking/canning berries and selling strawberries. It is another community, not the game’s family. |
+
+The five museum photograph/object records explicitly display **Copyright Minnesota Historical Society Collections** and no item-specific open reuse license. Following the [collection usage guidance](https://ojibwe.lib.umn.edu/content/copyright-usage-restrictions), the source shelf links to their original catalogue pages and **does not download, embed, hotlink, crop, or reproduce those images**. The general dictionary license is not applied to partner photographs. Reproduction would need a suitable license or the holder’s permission.
+
+The Joseph Corn source is separately credited to its federal record and catalogue; no museum-photo copyright claim is assigned to it. Its record image is linked rather than reproduced. Discuss the official recorder’s judgments and missing family voice. No verified Ojibwe blueberry-harvest photograph has been found; the game does not substitute a generic Indigenous photograph or an AI image.
+
+## Evidence and the fictional family
+
+The original treaty is an English legal record involving U.S. representatives and named Ojibwe delegates. It does not capture every oral explanation or community understanding. The 1889 statute is a federal legislative plan, not a complete record of implementation or household experience. Photographs preserve a recorded view, not all the work or knowledge outside the frame.
+
+The classroom map remains an illustrative diagram, not a survey, deed, or complete account of sovereignty and treaty rights. The sources establish community events and policy, not the personal property history or displacement of the invented family. June’s rental, relatives, ancestors, photo, and time travel remain fiction. Contemporary housing and unresolved dispossession can coexist; the meal does not undo that history.
 
 ## Earlier corroboration and further review
 

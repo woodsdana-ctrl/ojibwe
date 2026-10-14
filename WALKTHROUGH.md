@@ -115,3 +115,7 @@ GIVE GIIGOONH TO NOOKOMIS
 Optional opening conversations: `ASK NOOKOMIS ABOUT HOME`, `ASK NOOKOMIS ABOUT LAND`, and `EXAMINE RESTORATION UPDATE` in the records room. The 2024 update is additional evidence; the three required cards and the photo caption open the trail.
 
 Honesty and Wisdom appear in spring, Respect and Love in summer, Truth and Humility in fall, and Bravery/Courage in winter. These are fictional classroom applications pending local review. The ending brings a family meal together; it does not repair the historical dispossession described in the records.
+
+## Original source material
+
+`SOURCES`, `DOCUMENTS`, or `PHOTOS` opens the source shelf. `VIEW TREATY`, `VIEW NELSON ACT`, and `VIEW RESTORATION LAW` select the original printed documents. Use the page controls, full-size scan, and PDF links to read them. Season filters show real archive material connected to the chapter; linked museum images keep their actual dates and places. Opening the shelf does not alter puzzle flags or inventory.

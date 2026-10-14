@@ -3,11 +3,12 @@ export function noun(text){return normalize(text).replace(/^(the|a|an|some|my) /
 export function parse(input){
   const text=normalize(input);if(!text)return {verb:'empty'};
   const short={l:'look',i:'inventory',inv:'inventory',x:'examine',n:'north',s:'south',e:'east',w:'west',se:'southeast',nw:'northwest'};
-  const direct=['look','inventory','help','hint','journal','map','save','load','restart','timeline','wait','fish','north','south','east','west','southeast','northwest'];
+  const direct=['look','inventory','help','hint','journal','map','save','load','restart','timeline','sources','documents','photos','wait','fish','north','south','east','west','southeast','northwest'];
   const expanded=short[text]||text;if(direct.includes(expanded))return {verb:expanded};
   const patterns=[
     [/^(?:talk(?: to)?|speak(?: to)?)\s+(.+)$/,'talk'],
     [/^(?:compare|read together) (?:records|the records|cards|the cards|maps|the maps)$/,'records'],
+    [/^(?:view|open|read source) (.+)$/,'source'],
     [/^caption (.+?) (?:as|with) (.+)$/,'caption'],
     [/^ask (.+?) about (.+)$/,'ask'],
     [/^(?:label|name) (.+?) (?:as|with) (.+)$/,'label'],

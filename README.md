@@ -16,6 +16,14 @@ Ojibwe food words appear in requests and tasks: try `ASK NIIBIN ABOUT MIINAN`, `
 
 Arrow Up/Down recalls commands. Buttons are keyboard-accessible shortcuts. `SAVE` makes a checkpoint; `LOAD` restores it while autosave continues separately. `RESTART` asks before clearing both. Saves stay in this browser on this website’s origin. Restricted browser storage does not prevent playing the current session.
 
+## Real source shelf
+
+Click **Sources & photos** or type `SOURCES`. `VIEW TREATY`, `VIEW NELSON ACT`, and `VIEW RESTORATION LAW` open the relevant original. The shelf includes official 1855/1889/2020 printed-page facsimiles and complete PDFs, exact excerpts, dates, creators, places, and questions for comparing evidence. It works without a PDF browser plugin because the selected pages are also images.
+
+Seasonal photograph/object cards link to the actual archive records. Museum images are not reproduced where an item-specific reuse license is missing. Summer currently has drying-rack objects and a household record; no verified blueberry-picking photo is claimed. These sources are optional to explore and do not change saved puzzle progress.
+
+Source captions and metadata are editable in `content.sourceLibrary` in `src/content.js`; document files are under `assets/documents/`. Preserve provenance, accurate captions, and rights information when adding material. The build copies those assets for static hosting.
+
 ## Run locally
 
 Install Node.js 22 or newer. In the game folder run:
@@ -43,7 +51,7 @@ npm run build
 
 The Node suite covers the complete route, history comparison and caption, sap labeling, teaching encounters, aliases, hints, puzzle prerequisites, route gates, recoverable mistakes, storage, and save validation. Browser checks use the same complete route.
 
-For browser integration, provide Playwright and Chromium, then run `npm run test:browser`. It checks the ending, reload/checkpoints/restart, command history, restricted storage, and Chromebook and phone layouts. Playwright is optional test tooling, not an application dependency.
+For browser integration, provide Playwright and Chromium, then run `npm run test:browser`. It checks the ending, reload/checkpoints/restart, command history, restricted storage, and Chromebook and phone layouts. Playwright is optional test tooling, not an application dependency. `npm run test:sources` checks actual scan/PDF loading, page navigation, archive links, source metadata, keyboard focus, and unchanged game progress.
 
 ## Classroom and source documents
 
@@ -54,4 +62,4 @@ For browser integration, provide Playwright and Chromium, then run `npm run test
 
 `src/content.js` holds story, vocabulary, character names, history, and source metadata. Parser, engine, storage, and interface code are separate modules under `src/`.
 
-Live Ojibwe People’s Dictionary entries and selected historical object records were checked on October 14, 2026. **Local cultural/classroom review remains pending.** Character names use verified ordinary words; the story does not assert ceremonial naming customs. The household and ancestors are fictional; the documented land-history events are identified by source. Time travel is a storytelling invention. A present-day home does not imply that dispossession was repaired, and the adventure cannot undo that history.
+Official GovInfo treaty/statute PDFs, live Ojibwe People’s Dictionary entries, and selected historical object records were checked on October 14, 2026. **Local cultural/classroom review remains pending.** Character names use verified ordinary words; the story does not assert ceremonial naming customs. The household and ancestors are fictional; the documented land-history events are identified by source. Time travel is a storytelling invention. A present-day home does not imply that dispossession was repaired, and the adventure cannot undo that history.

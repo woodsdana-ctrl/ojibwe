@@ -1,0 +1,74 @@
+[
+  {
+    "sourceId": "treaty1855",
+    "path": "assets/documents/1855-treaty.pdf",
+    "originalSource": "https://www.govinfo.gov/content/pkg/STATUTE-10/pdf/STATUTE-10-Pg1165.pdf",
+    "sha256": "869dffe2a7a1049496e90622dafc839bb56bafc8f1ff5fcef533c8f9b87e35dc",
+    "bytes": 1556534,
+    "type": "official downloaded PDF"
+  },
+  {
+    "sourceId": "treaty1855",
+    "path": "assets/documents/1855-treaty-page-1.png",
+    "originalSource": "https://www.govinfo.gov/content/pkg/STATUTE-10/pdf/STATUTE-10-Pg1165.pdf",
+    "sha256": "64e317a2a37e89d0634d4c20573716d2ca16b009810858059e3f9f82447bc5b7",
+    "bytes": 1270222,
+    "type": "page rendered from official PDF"
+  },
+  {
+    "sourceId": "treaty1855",
+    "path": "assets/documents/1855-treaty-page-2.png",
+    "originalSource": "https://www.govinfo.gov/content/pkg/STATUTE-10/pdf/STATUTE-10-Pg1165.pdf",
+    "sha256": "81ad05882c12e939f5211f977694fb80848290b592860753dbfb5f27c006be7d",
+    "bytes": 1515513,
+    "type": "page rendered from official PDF"
+  },
+  {
+    "sourceId": "nelson1889",
+    "path": "assets/documents/1889-nelson-act.pdf",
+    "originalSource": "https://www.govinfo.gov/content/pkg/STATUTE-25/pdf/STATUTE-25-Pg642.pdf",
+    "sha256": "48ccee81d978aa040dd659ef95c15f12b499a52ef74d4a1b383fc411d5ca52de",
+    "bytes": 1401561,
+    "type": "official downloaded PDF"
+  },
+  {
+    "sourceId": "nelson1889",
+    "path": "assets/documents/1889-nelson-act-page-2.png",
+    "originalSource": "https://www.govinfo.gov/content/pkg/STATUTE-25/pdf/STATUTE-25-Pg642.pdf",
+    "sha256": "47d0e8c84df0e21b5cf993779ac06b7d00d2a0c8664c2407dc9772943a0894e7",
+    "bytes": 1224226,
+    "type": "page rendered from official PDF"
+  },
+  {
+    "sourceId": "nelson1889",
+    "path": "assets/documents/1889-nelson-act-page-3.png",
+    "originalSource": "https://www.govinfo.gov/content/pkg/STATUTE-25/pdf/STATUTE-25-Pg642.pdf",
+    "sha256": "bde6425188ea3ca4630b1267e778d007f9d5d6ef0c99aaa02c92148429be6b38",
+    "bytes": 1149966,
+    "type": "page rendered from official PDF"
+  },
+  {
+    "sourceId": "restoration2020",
+    "path": "assets/documents/2020-restoration.pdf",
+    "originalSource": "https://www.govinfo.gov/content/pkg/PLAW-116publ255/pdf/PLAW-116publ255.pdf",
+    "sha256": "e6693ea5ba010da68ade0847f42be0842365e9312aff12f6b74f17db689220ce",
+    "bytes": 205012,
+    "type": "official downloaded PDF"
+  },
+  {
+    "sourceId": "restoration2020",
+    "path": "assets/documents/2020-restoration-page-1.png",
+    "originalSource": "https://www.govinfo.gov/content/pkg/PLAW-116publ255/pdf/PLAW-116publ255.pdf",
+    "sha256": "05de0e6f26e09b6bae25e6172f03d45be4fcb874a88720435b0b5ba0fce21366",
+    "bytes": 254609,
+    "type": "page rendered from official PDF"
+  },
+  {
+    "sourceId": "restoration2020",
+    "path": "assets/documents/2020-restoration-page-2.png",
+    "originalSource": "https://www.govinfo.gov/content/pkg/PLAW-116publ255/pdf/PLAW-116publ255.pdf",
+    "sha256": "c55504100135859c4155720cbc338b948dc8c52012ace4afaa3c9359f0ffdba1",
+    "bytes": 323046,
+    "type": "page rendered from official PDF"
+  }
+]
