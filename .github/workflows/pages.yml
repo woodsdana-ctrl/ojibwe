@@ -21,11 +21,10 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Prepare static website
         run: |
-          mkdir public
-          cp index.html public/index.html
+          node scripts/build.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: dist
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
