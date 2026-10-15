@@ -75,6 +75,7 @@ try{
   assert.equal(Object.keys(saved.teachings).length,7);assert.equal(saved.visited.length,12);
   await p.getByRole('button',{name:'Journal',exact:true}).click();
   for(const teaching of ['Wisdom','Love','Respect','Bravery','Honesty','Humility','Truth'])assert.match(await p.locator('#transcript').textContent(),new RegExp(teaching));
+  await p.locator('#journal-close').click();
   await p.getByRole('button',{name:'Time & history',exact:true}).click();
   const timeline=await p.locator('#transcript .entry').last().textContent();
   assert.match(timeline,/YOUR TIME CROSSINGS/);assert.match(timeline,/LAND-HISTORY TIMELINE/);

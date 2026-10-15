@@ -1,11 +1,53 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A four-season northern Minnesota text adventure. Follow a mysterious trail and help bring a family feast to Grandma’s table."><title>Four Seasons to Grandma’s Table</title><link rel="stylesheet" href="./src/style.css"><link rel="stylesheet" href="./src/source-viewer.css"><script type="module" src="./src/ui.js"></script></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#264b43">
+  <meta name="description" content="An illustrated Ojibwe vocabulary and history adventure across four seasons. Explore a family story, examine real historical documents, and bring dinner home.">
+  <title>Four Seasons to Grandma’s Table</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/scene-view.css">
+  <link rel="stylesheet" href="./src/map-view.css">
+  <link rel="stylesheet" href="./src/source-viewer.css">
+  <script type="module" src="./src/ui.js"></script>
+</head>
 <body>
-<a class="skip" href="#command">Skip to command input</a>
-<header><div class="masthead"><span class="eyebrow">A NORTHERN MINNESOTA TEXT ADVENTURE</span><h1>Four Seasons<br>to Grandma’s Table<span class="cursor" aria-hidden="true">_</span></h1><p>A familiar trail. An unfamiliar calendar. Dinner is still at six.</p></div><div class="edition">CLASSROOM DRAFT<span>≈ 25 minutes · no timer</span><span>Dictionary words checked · local story review pending</span></div></header>
-<main><section class="terminal" aria-label="Adventure terminal"><div class="statusbar"><span id="location"></span><span id="season"></span><span id="period"></span></div><div class="goal"><span>YOUR NEXT STEP</span><p id="objective"></p></div><div id="transcript" role="log" aria-label="Story and command transcript" aria-live="polite" aria-relevant="additions" tabindex="0"></div><div id="exit-controls" class="suggestions" aria-label="Clickable exits"></div><form id="command-form" autocomplete="off"><label for="command"><span aria-hidden="true">&gt;</span><span class="sr-only">Adventure command</span></label><input id="command" name="command" placeholder="Type a command… (HELP to begin)" spellcheck="false" maxlength="200" aria-describedby="input-help"><button class="primary" type="submit">Enter ↵</button></form><p id="input-help" class="input-help">Arrow ↑ / ↓ recalls commands. English words work. No countdown. No dead ends.</p></section>
-<aside aria-label="Adventure notebook"><section class="card"><h2>Where you are in time</h2><p id="time-context" class="small"></p><ol id="crossing-history" class="crossing-history" aria-label="Recent time crossings"></ol></section><section class="card"><h2>Feast contributions</h2><ul id="contributions"></ul><p class="small">One small part of a larger family meal.</p></section><section class="card"><h2>Notebook & controls</h2><div class="controls"><button data-command="inventory">Inventory <kbd>I</kbd></button><button data-command="journal">Journal</button><button data-command="map">Map</button><button data-command="timeline">Time & history</button><button id="source-open" type="button">Sources & photos</button><button data-command="hint">Hint <span>1 → 2 → 3</span></button><button data-command="help">Help</button><button data-command="look">Look <kbd>L</kbd></button><button data-command="save">Save</button><button data-command="load">Load</button></div><button id="restart" class="quiet">Restart adventure</button><p id="storage-status" class="small" role="status"></p></section><section class="card"><h2>Ojibwe word cards</h2><div id="word-cards"></div><p class="small">English commands work too. Sources and meanings are in JOURNAL.</p></section><section class="card"><h2>Try something nearby</h2><div id="nearby" class="nearby"></div></section><details class="card"><summary>About this classroom draft</summary><p id="framing"></p><p id="language-note"></p><p>Fictional characters and dialogue; no cultural review or endorsement is claimed. Teachings have no authenticity or morality score.</p><p><a href="./TEACHER_GUIDE.md">Teacher guide</a> · <a href="./CONTENT_REVIEW.md">Content review</a></p></details></aside></main>
-<footer>Four Seasons to Grandma’s Table · A deterministic adventure, made for curiosity.<br>No accounts, student data collection, analytics, or runtime AI calls.</footer>
-<dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">Start a new adventure?</h2><p>This erases autosaved and manually saved progress in this browser. Your current journey will be replaced.</p><div class="dialog-actions"><button id="cancel-restart">Keep my journey</button><button id="confirm-restart" class="primary">Erase & restart</button></div></dialog>
-</body></html>
+  <a class="skip" href="#command">Skip to command input</a>
+  <header class="site-header">
+    <div class="masthead"><span class="eyebrow">A FIELD JOURNAL FROM NORTHERN MINNESOTA</span><h1>Four Seasons <em>to Grandma’s Table</em></h1><p>A familiar trail. An unfamiliar calendar. Dinner is still at six.</p></div>
+    <div class="edition"><span class="edition-mark" aria-hidden="true">✳</span><div>EXPLORE · LEARN · NOTICE<span>A family adventure in language & history</span><span>Classroom draft · ≈ 30 minutes · no timer</span></div></div>
+  </header>
+  <nav class="journey-toolbar" aria-label="Adventure tools">
+    <div class="toolbar-label"><span class="compass-mark" aria-hidden="true">↟</span> YOUR JOURNEY</div>
+    <div class="toolbar-actions"><button id="map-open" type="button">Map</button><button id="inventory-open" type="button">Inventory <span id="inventory-count">0</span></button><button id="journal-open" type="button">Journal</button><button id="source-open" type="button">Sources & photos</button><button data-command="hint" type="button">Hint <span>1 → 2 → 3</span></button></div>
+  </nav>
+  <main>
+    <div class="play-layout" id="play-layout">
+      <section class="scene-panel" aria-label="Illustrated location"><div id="scene-view"></div></section>
+      <section class="terminal" aria-label="Adventure terminal">
+        <div class="story-heading"><h2>The story so far</h2><span id="story-chapter">HOME</span></div>
+        <div class="statusbar"><span id="location"></span><span id="season"></span><span id="period"></span></div>
+        <div class="goal"><span>YOUR NEXT STEP</span><p id="objective"></p></div>
+        <div id="transcript" role="log" aria-label="Story and command transcript" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+        <div id="exit-controls" class="suggestions" aria-label="Clickable exits"></div>
+        <form id="command-form" autocomplete="off"><label for="command"><span aria-hidden="true">&gt;</span><span class="sr-only">Adventure command</span></label><input id="command" name="command" placeholder="What will you do? (HELP for ideas)" spellcheck="false" maxlength="200" aria-describedby="input-help"><button class="primary" type="submit">Enter ↵</button></form>
+        <p id="input-help" class="input-help">Type freely or click the scene. ↑ / ↓ recalls commands. English works too.</p>
+      </section>
+    </div>
+    <aside class="field-notebook" aria-label="Adventure notebook">
+      <section class="card inventory-card"><div class="card-heading"><h2>In your tote</h2><span class="card-number">01</span></div><div id="inventory-items" class="inventory-items"></div><p class="small">Select an item to examine it.</p></section>
+      <section class="card"><div class="card-heading"><h2>Grandma’s table</h2><span class="card-number">02</span></div><ul id="contributions"></ul><p class="small">One small part of a larger family meal.</p></section>
+      <section class="card"><div class="card-heading"><h2>Where you are in time</h2><span class="card-number">03</span></div><p id="time-context" class="small"></p><ol id="crossing-history" class="crossing-history" aria-label="Recent time crossings"></ol><button class="text-button" data-command="timeline" type="button">Time & history</button></section>
+      <section class="card"><div class="card-heading"><h2>Ojibwe word cards</h2><span class="card-number">04</span></div><div id="word-cards"></div><p class="small">English commands work too. Explore all your words in the journal.</p></section>
+      <section class="card"><div class="card-heading"><h2>Try something nearby</h2><span class="card-number">05</span></div><div id="nearby" class="nearby"></div></section>
+      <section class="card"><div class="card-heading"><h2>Keep your place</h2><span class="card-number">06</span></div><div class="controls"><button data-command="save" type="button">Save checkpoint</button><button data-command="load" type="button">Load checkpoint</button><button data-command="look" type="button">Look <kbd>L</kbd></button><button data-command="help" type="button">Help</button></div><button id="restart" class="quiet" type="button">Restart adventure</button><p id="storage-status" class="small" role="status"></p></section>
+      <details class="card about-card"><summary>About this classroom draft</summary><p id="framing"></p><p id="language-note"></p><p>Characters, dialogue, and illustrations are fictional. Actual source scans have their own dates and credits. Local cultural review remains pending; no endorsement is claimed.</p><p><a href="./TEACHER_GUIDE.md">Teacher guide</a> · <a href="./CONTENT_REVIEW.md">Content review</a> · <a href="./SOURCE_NOTES.md">Source notes</a></p></details>
+    </aside>
+  </main>
+  <footer><span>Four Seasons to Grandma’s Table</span><p>Made for curiosity. No accounts, student data collection, analytics, or runtime AI calls.</p></footer>
+  <dialog id="inventory-dialog" class="notebook-dialog" aria-labelledby="inventory-title"><div class="notebook-heading"><div><span class="eyebrow">YOUR FIELD JOURNAL</span><h2 id="inventory-title">In your tote</h2></div><button id="inventory-close" type="button" aria-label="Close inventory">Close ×</button></div><div id="inventory-detail" class="inventory-items"></div><p class="small">Select an item to examine it in the story. DROP item sets it down where you are.</p></dialog>
+  <dialog id="journal-dialog" class="notebook-dialog" aria-labelledby="journal-title"><div class="notebook-heading"><div><span class="eyebrow">YOUR FIELD JOURNAL</span><h2 id="journal-title">Notes from the trail</h2></div><button id="journal-close" type="button" aria-label="Close journal">Close ×</button></div><div id="journal-detail"></div></dialog>
+  <dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">Start a new adventure?</h2><p>This erases autosaved and manually saved progress in this browser. Your current journey will be replaced.</p><div class="dialog-actions"><button id="cancel-restart" type="button">Keep my journey</button><button id="confirm-restart" class="primary" type="button">Erase & restart</button></div></dialog>
+</body>
+</html>

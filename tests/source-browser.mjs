@@ -94,7 +94,7 @@ try {
     assert.match(await originalLink.getAttribute('href'), /^https:\/\/ojibwe\.lib\.umn\.edu\/collection\//);
     assert.equal(await originalLink.getAttribute('target'), '_blank');
   }
-  await page.locator('[data-source-id="joseph-corn-survey"]').click();
+  await page.locator('.source-choice[data-source-id="joseph-corn-survey"]').click();
   assert.match(await page.locator('.source-metadata').textContent(), /Lac du Flambeau Agency, Wisconsin/);
   assert.match(await page.locator('.source-metadata').textContent(), /May 10,\s*1922/);
   assert.equal(await page.locator('.source-detail img').count(), 0);
@@ -124,7 +124,7 @@ try {
   assert.ok(await scanLoaded(page) > 800);
   assert.match(await page.locator('.source-transcription').textContent(), /instead of being removed to and taking such allotment on White Earth Reservation/);
   assert.match(await page.locator('.source-detail').textContent(), /not.*proof that everyone left Leech Lake/i);
-  await page.locator('[data-source-id="restoration2020"]').click();
+  await page.locator('.source-choice[data-source-id="restoration2020"]').click();
   assert.ok(await scanLoaded(page) > 800);
   assert.match(await page.locator('.source-metadata').textContent(), /2020-12-23/);
   assert.match(await page.locator('.source-detail').textContent(), /retrospective evidence/);
@@ -140,7 +140,7 @@ try {
   ]) {
     await page.setViewportSize(viewport);
     await page.locator('#source-open').click();
-    await page.locator('[data-source-id="treaty1855"]').click();
+    await page.locator('.source-choice[data-source-id="treaty1855"]').click();
     assert.ok(await scanLoaded(page) > 800);
     const layout = await page.evaluate(() => {
       const modal = document.querySelector('.source-dialog');

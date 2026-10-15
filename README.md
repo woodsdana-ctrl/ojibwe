@@ -1,6 +1,6 @@
 # Four Seasons to Grandma’s Table
 
-A playable browser text adventure for high school students, blending Ojibwe vocabulary, family humor, seasonal problem solving, and Leech Lake history. Begin at Nookomis’s present-day rented home near Cass Lake, compare land-history records, then follow four seasonal paths to bring syrup, blueberries, prepared wild rice, and fish to the family table.
+A playable illustrated browser adventure for high school students, blending Ojibwe vocabulary, family humor, seasonal problem solving, and Leech Lake history. Begin at Nookomis’s present-day rented home near Cass Lake, compare land-history records, then follow four seasonal paths to bring syrup, blueberries, prepared wild rice, and fish to the family table.
 
 [Play the website](https://woodsdana-ctrl.github.io/ojibwe/). For the full revised opening, start a new game; saves keep earlier progress.
 
@@ -20,9 +20,19 @@ Arrow Up/Down recalls commands. Buttons are keyboard-accessible shortcuts. `SAVE
 
 Click **Sources & photos** or type `SOURCES`. `VIEW TREATY`, `VIEW NELSON ACT`, and `VIEW RESTORATION LAW` open the relevant original. The shelf includes official 1855/1889/2020 printed-page facsimiles and complete PDFs, exact excerpts, dates, creators, places, and questions for comparing evidence. It works without a PDF browser plugin because the selected pages are also images.
 
-Seasonal photograph/object cards link to the actual archive records. Museum images are not reproduced where an item-specific reuse license is missing. Summer currently has drying-rack objects and a household record; no verified blueberry-picking photo is claimed. These sources are optional to explore and do not change saved puzzle progress.
+Seasonal photograph/object cards link to the actual archive records. Museum images are not reproduced where an item-specific reuse license is missing. Summer currently has drying-rack objects and a household record; no verified blueberry-picking photo is claimed. Browsing the source shelf does not change puzzle progress. Selecting a document on the illustrated records-room table also examines its paired exhibit card, just like the corresponding typed `EXAMINE` command.
 
 Source captions and metadata are editable in `content.sourceLibrary` in `src/content.js`; document files are under `assets/documents/`. Preserve provenance, accurate captions, and rights information when adding material. The build copies those assets for static hosting.
+
+## Illustrated field journal
+
+Each of the twelve locations has its own original SVG illustration. Select a scene label to examine an object, use **Within reach** buttons to pick up portable items, or select a portrait to talk. The typed-command story remains available alongside the scene. A year badge identifies every location, and the map separates present-day paths from the two century crossings.
+
+**Map** opens the illustrated story map. It names visited locations and exits from your current location; choosing an open destination uses the same paths and prerequisites as typed travel. **Inventory** opens illustrated item cards; select an item to examine it. **Journal** opens your collected observations, vocabulary with dictionary links and recorded-speaker context, and teaching reflections. These tools work with keyboard controls and on small screens.
+
+Actual treaty and statute scans appear in the kitchen and records-room visuals and open the original source reader. Earlier legal records also appear as explicitly labeled editorial notebook evidence beside the fictional 1926 scenes. The 2020 law appears only in present-day scenes. Scans retain their original page content, dates, and public-domain GovInfo credits. Fictional scenery and portraits are labeled separately from historical evidence.
+
+To edit the visuals, use `assets/illustrations/{location}.svg` and `assets/portraits/{character-key}.svg` in a vector editor or edit their SVG markup. The READMEs in those folders explain their provenance. `src/scene-view.js` sets object-label positions as percentages and source placement; `src/map-view.js` sets story-map positions; `src/illustration-icons.js` holds the small inventory drawings. The overall colors and page layout are in `src/style.css`; scene, map, and archive-reader styles have their own CSS files. Displayed names and story text remain in `src/content.js`. This visual edition includes no audio.
 
 ## Run locally
 
@@ -40,7 +50,7 @@ The game uses plain JavaScript and separate browser modules. There are no applic
 
 `.github/workflows/pages.yml` builds and deploys the static site from `main`. In repository **Settings → Pages**, choose **GitHub Actions**, then run **Publish game website** or push an authorized update to `main`. A successful upload alone does not verify deployment.
 
-`npm run build` copies `index.html`, runtime `src/`, and the linked teacher, review, source, and walkthrough documents into `dist/`. Any static website host can serve that folder.
+`npm run build` copies `index.html`, runtime `src/`, all `assets/` including illustrations and original documents, and the linked teacher, review, source, and walkthrough documents into `dist/`. Any static website host can serve that folder.
 
 ## Validation
 
@@ -52,6 +62,8 @@ npm run build
 The Node suite covers the complete route, history comparison and caption, sap labeling, teaching encounters, aliases, hints, puzzle prerequisites, route gates, recoverable mistakes, storage, and save validation. Browser checks use the same complete route.
 
 For browser integration, provide Playwright and Chromium, then run `npm run test:browser`. It checks the ending, reload/checkpoints/restart, command history, restricted storage, and Chromebook and phone layouts. Playwright is optional test tooling, not an application dependency. `npm run test:sources` checks actual scan/PDF loading, page navigation, archive links, source metadata, keyboard focus, and unchanged game progress.
+
+`npm run test:visuals` checks all twelve scene images, eight portraits, clickable objects, recoverable inventory, document thumbnails, the 1926/2026 separation, map travel and locks, keyboard focus, and desktop/phone layouts. Browser checks start their own servers on ports 8011–8013 and stop them afterward.
 
 ## Classroom and source documents
 
